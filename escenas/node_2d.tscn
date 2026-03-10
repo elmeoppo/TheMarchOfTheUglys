@@ -8,14 +8,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00qvt"]
 size = Vector2(132, 128)
 
-[node name="Mundo" type="Node2D" unique_id=700058469 node_paths=PackedStringArray("player")]
+[node name="Mundo" type="Node2D" unique_id=700058469]
 script = ExtResource("1_hdjqb")
-player = NodePath("")
 
 [node name="Barra_Stamina" parent="." unique_id=667103573 instance=ExtResource("2_wvvap")]
 
 [node name="Jugador" parent="." unique_id=2018510561 instance=ExtResource("2_hdjqb")]
-position = Vector2(0, -1)
+position = Vector2(-3, -4)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1263480027]
 position = Vector2(-128, 11)

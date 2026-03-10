@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://draf0qk85h4td" path="res://Scrips/Jugador.gd" id="1_jpodt"]
 [ext_resource type="SpriteFrames" uid="uid://bt6uuaqou8v4d" path="res://assets/new_sprite_frames.tres" id="2_njcx7"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_g5y43"]
-radius = 70.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpodt"]
+size = Vector2(187, 114)
 
 [node name="Jugador" type="CharacterBody2D" unique_id=2018510561]
 script = ExtResource("1_jpodt")
@@ -14,10 +14,10 @@ position = Vector2(0, -5)
 zoom = Vector2(0.5, 0.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=756730548]
-position = Vector2(0.5, 0)
-scale = Vector2(7.9375, 8)
+scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_njcx7")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=188312609]
-shape = SubResource("CircleShape2D_g5y43")
+position = Vector2(-1.5, -7)
+shape = SubResource("RectangleShape2D_jpodt")
