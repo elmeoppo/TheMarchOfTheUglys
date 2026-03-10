@@ -17,6 +17,8 @@ var tocando_piso : bool:
 	set(value):
 		if value != tocando_piso:
 			tocando_piso = value
+			if tocando_piso:
+				toco_piso.emit()
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var timer: Timer = $Timer
@@ -47,11 +49,10 @@ func _ready() -> void:
 	timer.timeout.connect(_termino_recuperacion_tiempo)
 
 func _physics_process(delta: float) -> void:
+	#print(timer.time_left)
 	tocando_piso = is_on_floor()
 	if not tocando_piso:
 		velocity.y += gravedad_agua * delta
-	else:
-		toco_piso.emit()
 	direction = Input.get_axis("izquierda", "derecha")
 	if direction:
 		velocity.x = direction * SPEED
@@ -75,7 +76,7 @@ func _evaluar_saltos():
 func _on_tocar_piso():
 	print("TOCANDO PISO")
 	animated_sprite_2d.play("idle")
-	timer.start(1.0)
+	timer.start(3.0)
 
 func _termino_recuperacion_tiempo():
 	timer.stop()
