@@ -31,7 +31,7 @@ signal moving(direction : float)
 signal stop
 signal saltos_maximos_alcanzados
 signal toco_piso
-signal dio_salto
+signal cambio_saltos_dados
 @export var gravedad_agua : float = 350.0
 
 #VARIABLES DE MAXIMO NUMERO DE SALTOS
@@ -39,7 +39,7 @@ signal dio_salto
 @export var saltos_dados : int = 0:
 	set(value):
 		saltos_dados = value
-		dio_salto.emit()
+		cambio_saltos_dados.emit()
 @export var saltos_maximos : int = 3
 @export var ultimo_salto_registrado : int = -1
 var cansado : bool = false
@@ -70,10 +70,10 @@ func _input(event: InputEvent) -> void:
 		_evaluar_saltos()
 
 func _evaluar_saltos():
-	if saltos_dados < saltos_maximos - 1:
+	if saltos_dados < saltos_maximos:
 		velocity.y = JUMP_VELOCITY
 		saltos_dados += 1
-	if saltos_dados == saltos_maximos - 1:
+	if saltos_dados == saltos_maximos:
 		cansado = true
 		saltos_maximos_alcanzados.emit()
 

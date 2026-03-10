@@ -5,12 +5,10 @@ class_name BarraStamina
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	barra.value = player.saltos_maximos
 	barra.max_value = player.saltos_maximos
-	player.dio_salto.connect(_on_player_salto)
+	player.cambio_saltos_dados.connect(_on_saltos_cambio)
 	
 
-func _on_player_salto():
-	if barra.value > barra.min_value:
-		barra.value -= 1.0
-	print(barra.value)
+func _on_saltos_cambio():
+	barra.value = player.saltos_dados
+	print(player.saltos_dados)
