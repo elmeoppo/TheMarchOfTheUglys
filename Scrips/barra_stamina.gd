@@ -7,4 +7,10 @@ class_name BarraStamina
 func _ready() -> void:
 	barra.value = player.saltos_maximos
 	barra.max_value = player.saltos_maximos
+	player.dio_salto.connect(_on_player_salto)
 	
+
+func _on_player_salto():
+	if barra.value > barra.min_value:
+		barra.value -= 1.0
+	print(barra.value)

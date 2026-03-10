@@ -31,11 +31,15 @@ signal moving(direction : float)
 signal stop
 signal saltos_maximos_alcanzados
 signal toco_piso
+signal dio_salto
 @export var gravedad_agua : float = 350.0
 
 #VARIABLES DE MAXIMO NUMERO DE SALTOS
 
-@export var saltos_dados : int = 0
+@export var saltos_dados : int = 0:
+	set(value):
+		saltos_dados = value
+		dio_salto.emit()
 @export var saltos_maximos : int = 3
 @export var ultimo_salto_registrado : int = -1
 var cansado : bool = false
@@ -76,12 +80,14 @@ func _evaluar_saltos():
 func _on_tocar_piso():
 	print("TOCANDO PISO")
 	animated_sprite_2d.play("idle")
-	timer.start(3.0)
+	timer.start(1.0)
 
 func _termino_recuperacion_tiempo():
-	timer.stop()
-	cansado = false
-	saltos_dados = 0
+	if saltos_dados != 0.0:
+		saltos_dados -= 1
+	if saltos_dados == 0:
+		cansado = false
+		timer.stop()
 
 func _on_moving(dir: float) -> void:
 	if not cansado:
