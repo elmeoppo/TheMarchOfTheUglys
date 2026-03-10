@@ -4,23 +4,22 @@
 [ext_resource type="Texture2D" uid="uid://db3k5sfkyvgid" path="res://assets/negro_1.png" id="2_kyewv"]
 [ext_resource type="Texture2D" uid="uid://fp5wleghg108" path="res://assets/verde_1.png" id="3_qqfyd"]
 
-[node name="Control" type="Control" unique_id=667103573]
+[node name="BarraStamina" type="Control" unique_id=667103573]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Barra_Stamina" type="CanvasLayer" parent="." unique_id=1838006035]
 script = ExtResource("1_ah7va")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Barra_Stamina" unique_id=1624514734]
+[node name="Capa" type="CanvasLayer" parent="." unique_id=1838006035]
+
+[node name="Barra" type="TextureProgressBar" parent="Capa" unique_id=1624514734]
 offset_right = 2868.0
 offset_bottom = 1740.0
 scale = Vector2(0.1, 0.05)
 max_value = 150.0
-step = 0.1
 value = 150.0
 texture_under = ExtResource("2_kyewv")
 texture_progress = ExtResource("3_qqfyd")

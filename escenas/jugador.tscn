@@ -16,8 +16,11 @@ zoom = Vector2(0.5, 0.5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=756730548]
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_njcx7")
-animation = &"idle"
+animation = &"sudor"
+frame_progress = 0.03266999
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=188312609]
 position = Vector2(-1.5, -7)
 shape = SubResource("RectangleShape2D_jpodt")
+
+[node name="Timer" type="Timer" parent="." unique_id=27871646]

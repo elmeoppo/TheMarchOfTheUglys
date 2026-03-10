@@ -13,8 +13,13 @@ var direction : float :
 				moving.emit(direction)
 			else :
 				stop.emit()
+var tocando_piso : bool:
+	set(value):
+		if value != tocando_piso:
+			tocando_piso = value
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var timer: Timer = $Timer
 
 #VARIABLES DE VELOCIDAD Y GRAVEDAD
 
@@ -22,58 +27,31 @@ const SPEED : float = 300.0
 const JUMP_VELOCITY : float = -350.0
 signal moving(direction : float)
 signal stop
-var gravedad_agua : float = 350.0
+signal saltos_maximos_alcanzados
+signal toco_piso
+@export var gravedad_agua : float = 350.0
 
 #VARIABLES DE MAXIMO NUMERO DE SALTOS
 
-var saltos_dados : int = 0
-var saltos_maximos : int = 3
-var ultimo_salto_registrado : int = -1
+@export var saltos_dados : int = 0
+@export var saltos_maximos : int = 3
+@export var ultimo_salto_registrado : int = -1
+var cansado : bool = false
 
-#VARIABLES DE ESTAMINA
-
-var estamina_max : float = 150.0
-var estamina_actual : float = 150.0
-var costo_salto : float = 50.0
-var recuperacion_aire : float = 5.0
-var recuperacion_suelo : float = 40.0
 
 func _ready() -> void:
 	moving.connect(_on_moving)
 	stop.connect(_on_stop)
+	saltos_maximos_alcanzados.connect(_on_max_saltos)
+	toco_piso.connect(_on_tocar_piso)
+	timer.timeout.connect(_termino_recuperacion_tiempo)
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
+	tocando_piso = is_on_floor()
+	if not tocando_piso:
 		velocity.y += gravedad_agua * delta
-		estamina_actual += recuperacion_aire * delta
-
 	else:
-		if saltos_dados !=0 :
-			saltos_dados = 0
-		estamina_actual += recuperacion_suelo * delta
-
-	estamina_actual = clamp(estamina_actual, 0, estamina_max)
-
-	# Handle jump.
-	if Input.is_action_just_pressed("salto") and saltos_dados < saltos_maximos:
-		velocity.y = JUMP_VELOCITY
-		saltos_dados += 1
-		estamina_actual -= costo_salto
-	
-	if estamina_actual < 40.0:
-		if animated_sprite_2d.animation != "sudor":
-			animated_sprite_2d.play("sudor")
-	else:
-		if animated_sprite_2d.animation == "sudor":
-			animated_sprite_2d.play("idle")
-	
-	if saltos_dados != ultimo_salto_registrado:
-		print("Saltos actuales: ", saltos_dados)
-		ultimo_salto_registrado = saltos_dados
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+		toco_piso.emit()
 	direction = Input.get_axis("izquierda", "derecha")
 	if direction:
 		velocity.x = direction * SPEED
@@ -81,10 +59,34 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
 
+func _input(event: InputEvent) -> void:
+	# Manejar salto
+	if event.is_action_pressed("salto"):
+		_evaluar_saltos()
 
+func _evaluar_saltos():
+	if saltos_dados < saltos_maximos - 1:
+		velocity.y = JUMP_VELOCITY
+		saltos_dados += 1
+	if saltos_dados == saltos_maximos - 1:
+		cansado = true
+		saltos_maximos_alcanzados.emit()
+
+func _on_tocar_piso():
+	print("TOCANDO PISO")
+	animated_sprite_2d.play("idle")
+	timer.start(1.0)
+
+func _termino_recuperacion_tiempo():
+	timer.stop()
+	cansado = false
+	saltos_dados = 0
 
 func _on_moving(dir: float) -> void:
-	animated_sprite_2d.play("walk")
+	if not cansado:
+		animated_sprite_2d.play("walk")
+	else:
+		animated_sprite_2d.play("sudor")
 	if dir > 0.0:
 		animated_sprite_2d.flip_h = false
 	else:
@@ -93,7 +95,8 @@ func _on_moving(dir: float) -> void:
 func _on_stop() -> void:
 	animated_sprite_2d.play("idle")
 
-
+func _on_max_saltos():
+	animated_sprite_2d.play("sudor")
 
 func prueba ():
 	print("Esto es una prueba")
