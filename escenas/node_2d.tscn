@@ -99,8 +99,10 @@ size = Vector2(126, 125)
 [node name="Mundo" type="Node2D" unique_id=700058469]
 script = ExtResource("1_hdjqb")
 
-[node name="Barra_Stamina" parent="." unique_id=667103573 node_paths=PackedStringArray("player") instance=ExtResource("2_wvvap")]
+[node name="Barra_Stamina" parent="." unique_id=667103573 node_paths=PackedStringArray("player", "cantidad_manzanas") instance=ExtResource("2_wvvap")]
 player = NodePath("../Jugador")
+cantidad_manzanas = NodePath("../Cantidad_manzanas")
+metadata/_edit_use_anchors_ = true
 
 [node name="Jugador" parent="." unique_id=2018510561 instance=ExtResource("2_hdjqb")]
 position = Vector2(-3, -4)

@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://5kelkjovxhde" path="res://Scrips/barra_stamina.gd" id="1_ah7va"]
 [ext_resource type="Texture2D" uid="uid://bpj5vpcc32cq7" path="res://assets/Blob_assets/1.png" id="2_kyewv"]
 [ext_resource type="Texture2D" uid="uid://1fukyn2osqqp" path="res://assets/Blob_assets/barra_Stamina.png" id="3_kyewv"]
-[ext_resource type="Texture2D" uid="uid://cxlxj6aghd3ag" path="res://assets/Blob_assets/2.png" id="4_23jcm"]
+[ext_resource type="Texture2D" uid="uid://bxvrj0kdrue6h" path="res://assets/appel.png" id="4_qqfyd"]
+[ext_resource type="FontFile" uid="uid://qmxifrs3b331" path="res://Fonts/Daydream DEMO.otf" id="5_qqfyd"]
 
 [node name="BarraStamina" type="Control" unique_id=667103573]
 layout_mode = 3
@@ -24,6 +25,17 @@ offset_bottom = 229.85
 rotation = -3.141586
 scale = Vector2(0.4, 0.36)
 max_value = 3.0
+value = 2.0
 texture_under = ExtResource("2_kyewv")
 texture_over = ExtResource("3_kyewv")
-texture_progress = ExtResource("4_23jcm")
+texture_progress = ExtResource("4_qqfyd")
+
+[node name="Tiempo_n" type="Label" parent="Capa" unique_id=1371884676]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -110.0
+offset_bottom = 70.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("5_qqfyd")
+theme_override_font_sizes/font_size = 34

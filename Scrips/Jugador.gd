@@ -44,8 +44,9 @@ signal cambio_saltos_dados
 		cambio_saltos_dados.emit()
 @export var saltos_maximos : int = 3
 @export var ultimo_salto_registrado : int = -1
+
 var cansado : bool = false
-var modo_nyan : bool =false
+var modo_nyan : bool =false 
 
 func _ready() -> void:
 	moving.connect(_on_moving)

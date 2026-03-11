@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://draf0qk85h4td" path="res://Scrips/Jugador.gd" id="1_jpodt"]
 [ext_resource type="SpriteFrames" uid="uid://bt6uuaqou8v4d" path="res://assets/Blob_assets/new_sprite_frames.tres" id="2_njcx7"]
+[ext_resource type="Script" uid="uid://yqais7rdsgcr" path="res://Scrips/dañador.gd" id="3_njcx7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpodt"]
 size = Vector2(187, 114)
@@ -15,11 +16,17 @@ zoom = Vector2(0.5, 0.5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=756730548]
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_njcx7")
-animation = &"nyan"
+animation = &"salto"
 autoplay = "idle"
+frame = 13
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=188312609]
 position = Vector2(-1.5, -7)
 shape = SubResource("RectangleShape2D_jpodt")
 
 [node name="Timer" type="Timer" parent="." unique_id=27871646]
+
+[node name="dañador" type="Node2D" parent="." unique_id=148577782 node_paths=PackedStringArray("player")]
+script = ExtResource("3_njcx7")
+player = NodePath("..")
