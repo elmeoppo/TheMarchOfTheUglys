@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c0i5q50ttteum"]
+
+[ext_resource type="Texture2D" uid="uid://85p41am3b8eb" path="res://assets/rojo.png" id="1_ke1wd"]
+[ext_resource type="Texture2D" uid="uid://1fukyn2osqqp" path="res://assets/Blob_assets/barra_Stamina.png" id="2_6f20q"]
+[ext_resource type="Texture2D" uid="uid://cxlxj6aghd3ag" path="res://assets/Blob_assets/2.png" id="3_owjt5"]
+
+[node name="barra_vida" type="Control" unique_id=1598866872]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Capa" type="CanvasLayer" parent="." unique_id=1803406352]
+
+[node name="Barra" type="TextureProgressBar" parent="Capa" unique_id=275705508]
+offset_left = 1153.0
+offset_top = 63.0
+offset_right = 2320.0
+offset_bottom = 232.0
+rotation = -3.141586
+scale = Vector2(0.4, 0.36)
+max_value = 3.0
+texture_under = ExtResource("1_ke1wd")
+texture_over = ExtResource("2_6f20q")
+texture_progress = ExtResource("3_owjt5")
+metadata/_edit_use_anchors_ = true

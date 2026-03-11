@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://5kelkjovxhde" path="res://Scrips/barra_stamina.gd" id="1_ah7va"]
 [ext_resource type="Texture2D" uid="uid://bpj5vpcc32cq7" path="res://assets/Blob_assets/1.png" id="2_kyewv"]
 [ext_resource type="Texture2D" uid="uid://1fukyn2osqqp" path="res://assets/Blob_assets/barra_Stamina.png" id="3_kyewv"]
-[ext_resource type="Texture2D" uid="uid://bxvrj0kdrue6h" path="res://assets/appel.png" id="4_qqfyd"]
+[ext_resource type="Texture2D" uid="uid://cxlxj6aghd3ag" path="res://assets/Blob_assets/2.png" id="4_23jcm"]
 [ext_resource type="FontFile" uid="uid://qmxifrs3b331" path="res://Fonts/Daydream DEMO.otf" id="5_qqfyd"]
 [ext_resource type="Texture2D" uid="uid://bj32y2o07t3c2" path="res://assets/icon.svg" id="6_23jcm"]
 
@@ -19,33 +19,35 @@ script = ExtResource("1_ah7va")
 [node name="Capa" type="CanvasLayer" parent="." unique_id=1838006035]
 
 [node name="Barra" type="TextureProgressBar" parent="Capa" unique_id=1624514734]
-offset_left = 466.8
-offset_top = 60.85
-offset_right = 1633.8
-offset_bottom = 229.85
+offset_left = 467.0
+offset_top = 62.0
+offset_right = 1634.0
+offset_bottom = 231.0
 rotation = -3.141586
 scale = Vector2(0.4, 0.36)
 max_value = 3.0
-value = 2.0
 texture_under = ExtResource("2_kyewv")
 texture_over = ExtResource("3_kyewv")
-texture_progress = ExtResource("4_qqfyd")
+texture_progress = ExtResource("4_23jcm")
+metadata/_edit_use_anchors_ = true
 
 [node name="Tiempo_n" type="Label" parent="Capa" unique_id=1371884676]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -110.0
-offset_bottom = 70.0
+offset_left = -1078.0
+offset_top = 78.0
+offset_right = -968.0
+offset_bottom = 148.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_qqfyd")
 theme_override_font_sizes/font_size = 34
 
 [node name="TextureRect" type="TextureRect" parent="Capa" unique_id=287485687]
-offset_left = 971.0
-offset_top = -1.0
-offset_right = 1032.0
-offset_bottom = 63.0
+offset_left = 3.0
+offset_top = 77.0
+offset_right = 64.0
+offset_bottom = 141.0
 texture = ExtResource("6_23jcm")
 expand_mode = 1
 stretch_mode = 5
