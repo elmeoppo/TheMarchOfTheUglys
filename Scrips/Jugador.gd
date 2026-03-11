@@ -25,6 +25,7 @@ var tocando_piso : bool:
 @onready var timer: Timer = $Timer
 
 #VARIABLES DE VELOCIDAD Y GRAVEDAD
+#hola
 
 var SPEED : float = 300.0
 const JUMP_VELOCITY : float = -350.0
