@@ -33,6 +33,7 @@ signal stop
 signal saltos_maximos_alcanzados
 signal toco_piso
 signal cambio_saltos_dados
+
 @export var gravedad_agua : float = 350.0
 
 #VARIABLES DE MAXIMO NUMERO DE SALTOS
@@ -70,13 +71,20 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("salto"):
 		_evaluar_saltos()
 
+func animacion_salto():
+	
+	if not modo_nyan:
+		animated_sprite_2d.play("salto")
+
 func _evaluar_saltos():
 	if saltos_dados < saltos_maximos:
 		velocity.y = JUMP_VELOCITY
 		saltos_dados += 1
+		animacion_salto()
 	if saltos_dados == saltos_maximos:
 		cansado = true
 		saltos_maximos_alcanzados.emit()
+	
 
 func _on_tocar_piso():
 	print("TOCANDO PISO")

@@ -331,9 +331,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_to47c")
 }],
-"loop": true,
+"loop": false,
 "name": &"salto",
-"speed": 5.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
