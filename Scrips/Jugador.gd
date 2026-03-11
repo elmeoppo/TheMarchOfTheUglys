@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
+@export var multiplicador_velocidad : int = 2
 var entera : int = 1
 var flot : float = 1
 var boleana : bool = false
@@ -25,7 +26,7 @@ var tocando_piso : bool:
 
 #VARIABLES DE VELOCIDAD Y GRAVEDAD
 
-const SPEED : float = 300.0
+var SPEED : float = 300.0
 const JUMP_VELOCITY : float = -350.0
 signal moving(direction : float)
 signal stop
@@ -43,7 +44,7 @@ signal cambio_saltos_dados
 @export var saltos_maximos : int = 3
 @export var ultimo_salto_registrado : int = -1
 var cansado : bool = false
-
+var modo_nyan : bool =false
 
 func _ready() -> void:
 	moving.connect(_on_moving)
@@ -90,10 +91,12 @@ func _termino_recuperacion_tiempo():
 		timer.stop()
 
 func _on_moving(dir: float) -> void:
-	if not cansado:
+	if not cansado and not modo_nyan:
 		animated_sprite_2d.play("walk")
-	else:
+	elif cansado and not modo_nyan:
 		animated_sprite_2d.play("sudor")
+	elif not cansado and modo_nyan:
+		animated_sprite_2d.play("nyan")
 	if dir > 0.0:
 		animated_sprite_2d.flip_h = false
 	else:
@@ -111,5 +114,12 @@ func prueba ():
 
 func inicio_nyan_mode():
 	print ("inicia")
-	if animated_sprite_2d.sprite_frames.has_animation("nyan"):
-		animated_sprite_2d.play("nyan")
+	modo_nyan = true
+	animated_sprite_2d.play("nyan")
+	SPEED = SPEED * multiplicador_velocidad
+
+func final_nyan_mode():
+	print ("termina")
+	modo_nyan = false
+	animated_sprite_2d.play("idle")
+	SPEED = SPEED / multiplicador_velocidad

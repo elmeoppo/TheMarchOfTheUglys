@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vap2thn56alv"
-path="res://.godot/imported/medusa_normal.png-b8e5d37bda9e88038b06ad066b2556c5.ctex"
+uid="uid://e2cn1ikfulcg"
+path="res://.godot/imported/blobfish saltando-sheet.png-a0bd85cdc4aab5fed23388f60ffc0ede.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medusa_normal.png"
-dest_files=["res://.godot/imported/medusa_normal.png-b8e5d37bda9e88038b06ad066b2556c5.ctex"]
+source_file="res://assets/Blob_assets/blobfish saltando-sheet.png"
+dest_files=["res://.godot/imported/blobfish saltando-sheet.png-a0bd85cdc4aab5fed23388f60ffc0ede.ctex"]
 
 [params]
 

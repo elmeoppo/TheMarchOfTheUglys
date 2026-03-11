@@ -4,3 +4,6 @@
 
 [node name="Cantidad_manzanas" type="Node" unique_id=1719017421]
 script = ExtResource("1_y1d8l")
+
+[node name="Timer" type="Timer" parent="." unique_id=326274860]
+wait_time = 5.0

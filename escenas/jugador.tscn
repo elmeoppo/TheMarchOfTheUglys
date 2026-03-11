@@ -15,7 +15,9 @@ zoom = Vector2(0.5, 0.5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=756730548]
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_njcx7")
-animation = &"nyan"
+animation = &"salto"
+frame = 5
+frame_progress = 0.95405453
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=188312609]
 position = Vector2(-1.5, -7)
