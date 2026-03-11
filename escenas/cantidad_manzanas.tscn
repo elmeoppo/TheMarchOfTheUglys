@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://do2k3tbp02u4d"]
+
+[ext_resource type="Script" uid="uid://c7jiqeq1halaq" path="res://Scrips/cantidad_manzanas.gd" id="1_y1d8l"]
+
+[node name="Cantidad_manzanas" type="Node" unique_id=1719017421]
+script = ExtResource("1_y1d8l")

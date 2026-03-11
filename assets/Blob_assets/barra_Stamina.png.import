@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1gulbe137du4"
-path="res://.godot/imported/Blobfish animación nado.png-637ab6b364dfd8461fce7eba22607006.ctex"
+uid="uid://1fukyn2osqqp"
+path="res://.godot/imported/barra_Stamina.png-04d7ae1e9ae06f4c98a6bc2d8432c3c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Blobfish animación nado.png"
-dest_files=["res://.godot/imported/Blobfish animación nado.png-637ab6b364dfd8461fce7eba22607006.ctex"]
+source_file="res://assets/Blob_assets/barra_Stamina.png"
+dest_files=["res://.godot/imported/barra_Stamina.png-04d7ae1e9ae06f4c98a6bc2d8432c3c2.ctex"]
 
 [params]
 

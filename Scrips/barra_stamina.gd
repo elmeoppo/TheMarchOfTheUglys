@@ -1,11 +1,14 @@
-extends CanvasLayer
-
+extends Control
+class_name BarraStamina
+@export var player : Player
+@onready var barra: TextureProgressBar = $Capa/Barra
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	barra.max_value = player.saltos_maximos
+	player.cambio_saltos_dados.connect(_on_saltos_cambio)
+	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_saltos_cambio():
+	barra.value = player.saltos_dados
+	print(player.saltos_dados)

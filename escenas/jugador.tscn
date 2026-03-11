@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c8rbk3dug2flk"]
 
 [ext_resource type="Script" uid="uid://draf0qk85h4td" path="res://Scrips/Jugador.gd" id="1_jpodt"]
-[ext_resource type="SpriteFrames" uid="uid://bt6uuaqou8v4d" path="res://assets/new_sprite_frames.tres" id="2_njcx7"]
+[ext_resource type="SpriteFrames" uid="uid://bt6uuaqou8v4d" path="res://assets/Blob_assets/new_sprite_frames.tres" id="2_njcx7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpodt"]
 size = Vector2(187, 114)
@@ -10,14 +10,15 @@ size = Vector2(187, 114)
 script = ExtResource("1_jpodt")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1343267365]
-position = Vector2(0, -5)
 zoom = Vector2(0.5, 0.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=756730548]
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_njcx7")
-animation = &"idle"
+animation = &"nyan"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=188312609]
 position = Vector2(-1.5, -7)
 shape = SubResource("RectangleShape2D_jpodt")
+
+[node name="Timer" type="Timer" parent="." unique_id=27871646]

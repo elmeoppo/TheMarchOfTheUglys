@@ -1,30 +1,135 @@
 [gd_scene format=3 uid="uid://u1ehn2f7a005"]
 
 [ext_resource type="Script" uid="uid://cfxq2tw3jb0ma" path="res://Scrips/Mundo.gd" id="1_hdjqb"]
+[ext_resource type="PackedScene" uid="uid://dj8rgici0te0l" path="res://escenas/manzana.tscn" id="2_00qvt"]
 [ext_resource type="PackedScene" uid="uid://c8rbk3dug2flk" path="res://escenas/jugador.tscn" id="2_hdjqb"]
 [ext_resource type="PackedScene" uid="uid://d3fnwhoxgwm8a" path="res://escenas/barra_stamina.tscn" id="2_wvvap"]
 [ext_resource type="Texture2D" uid="uid://bj32y2o07t3c2" path="res://assets/icon.svg" id="3_g5y43"]
+[ext_resource type="Script" uid="uid://dv3oercqt6wm3" path="res://Scrips/Medusa.gd" id="5_cey3t"]
+[ext_resource type="Texture2D" uid="uid://bl0n6dygyrc2i" path="res://assets/Blob_assets/medusa_Gatito.png" id="5_g5y43"]
+[ext_resource type="PackedScene" uid="uid://do2k3tbp02u4d" path="res://escenas/cantidad_manzanas.tscn" id="7_uxwy7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cey3t"]
+atlas = ExtResource("5_g5y43")
+region = Rect2(0, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00qvt"]
+atlas = ExtResource("5_g5y43")
+region = Rect2(55, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxwy7"]
+atlas = ExtResource("5_g5y43")
+region = Rect2(110, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqmnl"]
+atlas = ExtResource("5_g5y43")
+region = Rect2(165, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0g7c"]
+atlas = ExtResource("5_g5y43")
+region = Rect2(220, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok7wh"]
+atlas = ExtResource("5_g5y43")
+region = Rect2(275, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2end1"]
+atlas = ExtResource("5_g5y43")
+region = Rect2(330, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htfqa"]
+atlas = ExtResource("5_g5y43")
+region = Rect2(385, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxhy3"]
+atlas = ExtResource("5_g5y43")
+region = Rect2(440, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srhhh"]
+atlas = ExtResource("5_g5y43")
+region = Rect2(495, 0, 55, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uxgvi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cey3t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00qvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxwy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqmnl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0g7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok7wh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2end1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htfqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxhy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srhhh")
+}],
+"loop": true,
+"name": &"medusa_idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jggn"]
+size = Vector2(99, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00qvt"]
 size = Vector2(132, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cey3t"]
+size = Vector2(126, 125)
+
 [node name="Mundo" type="Node2D" unique_id=700058469]
 script = ExtResource("1_hdjqb")
 
-[node name="Barra_Stamina" parent="." unique_id=667103573 instance=ExtResource("2_wvvap")]
+[node name="Barra_Stamina" parent="." unique_id=667103573 node_paths=PackedStringArray("player") instance=ExtResource("2_wvvap")]
+player = NodePath("../Jugador")
 
 [node name="Jugador" parent="." unique_id=2018510561 instance=ExtResource("2_hdjqb")]
 position = Vector2(-3, -4)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1263480027]
+[node name="medusa" type="RigidBody2D" parent="." unique_id=107545423]
+position = Vector2(240, -203)
+script = ExtResource("5_cey3t")
+
+[node name="medusa_gato" type="AnimatedSprite2D" parent="medusa" unique_id=638680306]
+position = Vector2(0.765625, 0.07426834)
+scale = Vector2(2.3357954, 2.517029)
+sprite_frames = SubResource("SpriteFrames_uxgvi")
+animation = &"medusa_idle"
+frame = 3
+frame_progress = 0.35068166
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="medusa" unique_id=2043841977]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_2jggn")
+
+[node name="StaticBody2D1" type="StaticBody2D" parent="." unique_id=1263480027]
 position = Vector2(-128, 11)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=838675286]
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D1" unique_id=838675286]
 position = Vector2(1, 128)
 scale = Vector2(1.015625, 1)
 texture = ExtResource("3_g5y43")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1039605445]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D1" unique_id=1039605445]
 position = Vector2(0, 128)
 shape = SubResource("RectangleShape2D_00qvt")
 
@@ -51,3 +156,141 @@ texture = ExtResource("3_g5y43")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1340629794]
 position = Vector2(0, 128)
 shape = SubResource("RectangleShape2D_00qvt")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1890499673]
+position = Vector2(270, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" unique_id=993187388]
+position = Vector2(1, 128)
+scale = Vector2(1.015625, 1)
+texture = ExtResource("3_g5y43")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=134675]
+position = Vector2(0, 128)
+shape = SubResource("RectangleShape2D_00qvt")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=753706672]
+position = Vector2(403, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5" unique_id=28937409]
+position = Vector2(1, 128)
+scale = Vector2(1.015625, 1)
+texture = ExtResource("3_g5y43")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1452981423]
+position = Vector2(0, 128)
+shape = SubResource("RectangleShape2D_00qvt")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=1613050924]
+position = Vector2(535, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6" unique_id=964322151]
+position = Vector2(1, 128)
+scale = Vector2(1.015625, 1)
+texture = ExtResource("3_g5y43")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=1126175062]
+position = Vector2(0, 128)
+shape = SubResource("RectangleShape2D_00qvt")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=345409947]
+position = Vector2(-922, 11)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7" unique_id=1403050582]
+position = Vector2(1, 128)
+scale = Vector2(1.015625, 1)
+texture = ExtResource("3_g5y43")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=840851577]
+position = Vector2(0, 128)
+shape = SubResource("RectangleShape2D_00qvt")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=1449482267]
+position = Vector2(-789, 11)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D8" unique_id=1227883845]
+position = Vector2(1, 128)
+scale = Vector2(1.015625, 1)
+texture = ExtResource("3_g5y43")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=275092087]
+position = Vector2(0, 128)
+shape = SubResource("RectangleShape2D_00qvt")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=449083499]
+position = Vector2(-657, 11)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D9" unique_id=1363738544]
+position = Vector2(1, 128)
+scale = Vector2(1.015625, 1)
+texture = ExtResource("3_g5y43")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" unique_id=1396032468]
+position = Vector2(0, 128)
+shape = SubResource("RectangleShape2D_00qvt")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=309880706]
+position = Vector2(-525, 11)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D10" unique_id=1852896852]
+position = Vector2(1, 128)
+scale = Vector2(1.015625, 1)
+texture = ExtResource("3_g5y43")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=1104359738]
+position = Vector2(0, 128)
+shape = SubResource("RectangleShape2D_00qvt")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="." unique_id=175862876]
+position = Vector2(-392, 11)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D11" unique_id=6388022]
+position = Vector2(1, 128)
+scale = Vector2(1.015625, 1)
+texture = ExtResource("3_g5y43")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11" unique_id=913586552]
+position = Vector2(0, 128)
+shape = SubResource("RectangleShape2D_00qvt")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="." unique_id=2052360967]
+position = Vector2(-260, 11)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D12" unique_id=159222596]
+position = Vector2(1, 128)
+scale = Vector2(1.015625, 1)
+texture = ExtResource("3_g5y43")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12" unique_id=2066437286]
+position = Vector2(0, 128)
+shape = SubResource("RectangleShape2D_00qvt")
+
+[node name="Caja_Movible" type="RigidBody2D" parent="." unique_id=1990650094]
+position = Vector2(-858, -65)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Caja_Movible" unique_id=532786109]
+texture = ExtResource("3_g5y43")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caja_Movible" unique_id=447291083]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_cey3t")
+
+[node name="Cantidad_manzanas" parent="." unique_id=1719017421 node_paths=PackedStringArray("player") instance=ExtResource("7_uxwy7")]
+player = NodePath("../Jugador")
+
+[node name="Manzana" parent="Cantidad_manzanas" unique_id=1985196393 instance=ExtResource("2_00qvt")]
+position = Vector2(-281, 8)
+scale = Vector2(2, 2)
+
+[node name="Manzana2" parent="Cantidad_manzanas" unique_id=816650736 instance=ExtResource("2_00qvt")]
+position = Vector2(-403, 10)
+scale = Vector2(2, 2)
+
+[node name="Manzana3" parent="Cantidad_manzanas" unique_id=834073181 instance=ExtResource("2_00qvt")]
+position = Vector2(-165, 6)
+scale = Vector2(2, 2)
+
+[node name="Manzana4" parent="Cantidad_manzanas" unique_id=672796156 instance=ExtResource("2_00qvt")]
+position = Vector2(-527, 8)
+scale = Vector2(2, 2)

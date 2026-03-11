@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1xw556qniwco"
-path="res://.godot/imported/blobfish sudando.png-75cfd42e49ff4ca9c8ab60b49e7eda9d.ctex"
+uid="uid://d1gulbe137du4"
+path="res://.godot/imported/Blobfish animación nado.png-ec0e38bfafb05f5a62bbeae3e5e345a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/blobfish sudando.png"
-dest_files=["res://.godot/imported/blobfish sudando.png-75cfd42e49ff4ca9c8ab60b49e7eda9d.ctex"]
+source_file="res://assets/Blob_assets/Blobfish animación nado.png"
+dest_files=["res://.godot/imported/Blobfish animación nado.png-ec0e38bfafb05f5a62bbeae3e5e345a8.ctex"]
 
 [params]
 
