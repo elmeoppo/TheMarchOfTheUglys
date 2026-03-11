@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://1fukyn2osqqp" path="res://assets/Blob_assets/barra_Stamina.png" id="3_kyewv"]
 [ext_resource type="Texture2D" uid="uid://bxvrj0kdrue6h" path="res://assets/appel.png" id="4_qqfyd"]
 [ext_resource type="FontFile" uid="uid://qmxifrs3b331" path="res://Fonts/Daydream DEMO.otf" id="5_qqfyd"]
+[ext_resource type="Texture2D" uid="uid://bj32y2o07t3c2" path="res://assets/icon.svg" id="6_23jcm"]
 
 [node name="BarraStamina" type="Control" unique_id=667103573]
 layout_mode = 3
@@ -39,3 +40,12 @@ offset_bottom = 70.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_qqfyd")
 theme_override_font_sizes/font_size = 34
+
+[node name="TextureRect" type="TextureRect" parent="Capa" unique_id=287485687]
+offset_left = 971.0
+offset_top = -1.0
+offset_right = 1032.0
+offset_bottom = 63.0
+texture = ExtResource("6_23jcm")
+expand_mode = 1
+stretch_mode = 5
