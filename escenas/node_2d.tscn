@@ -111,7 +111,7 @@ player = NodePath("../Jugador")
 
 [node name="Jugador" parent="." unique_id=2018510561 instance=ExtResource("2_hdjqb")]
 position = Vector2(-3, -4)
-collision_mask = 4
+collision_mask = 12
 
 [node name="medusa" type="RigidBody2D" parent="." unique_id=107545423]
 position = Vector2(654, 2)
@@ -501,5 +501,5 @@ scale = Vector2(2, 2)
 [node name="gatito_medusa" parent="." unique_id=98317404 instance=ExtResource("10_r0g7c")]
 position = Vector2(323.99994, -69.00002)
 scale = Vector2(5, 5)
-collision_layer = 2
+collision_layer = 10
 collision_mask = 4
