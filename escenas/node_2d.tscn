@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dv3oercqt6wm3" path="res://Scrips/Medusa.gd" id="5_cey3t"]
 [ext_resource type="Texture2D" uid="uid://bl0n6dygyrc2i" path="res://assets/Blob_assets/medusa_Gatito.png" id="5_g5y43"]
 [ext_resource type="PackedScene" uid="uid://do2k3tbp02u4d" path="res://escenas/cantidad_manzanas.tscn" id="7_uxwy7"]
+[ext_resource type="Script" uid="uid://bicng0twq3dnn" path="res://Scrips/caja_movible.gd" id="8_ok7wh"]
 [ext_resource type="PackedScene" uid="uid://cil0x3u4hswm0" path="res://escenas/gatito_medusa.tscn" id="10_r0g7c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cey3t"]
@@ -114,9 +115,9 @@ position = Vector2(-3, -4)
 collision_mask = 12
 
 [node name="medusa" type="RigidBody2D" parent="." unique_id=107545423]
-position = Vector2(654, 2)
+position = Vector2(-848, -214)
 collision_layer = 4
-collision_mask = 4
+collision_mask = 0
 script = ExtResource("5_cey3t")
 
 [node name="medusa_gato" type="AnimatedSprite2D" parent="medusa" unique_id=638680306]
@@ -468,9 +469,11 @@ position = Vector2(0, 128)
 shape = SubResource("RectangleShape2D_00qvt")
 
 [node name="Caja_Movible" type="RigidBody2D" parent="." unique_id=1990650094]
-position = Vector2(-858, -65)
+position = Vector2(-370, -258)
 collision_layer = 4
 collision_mask = 7
+freeze_mode = 1
+script = ExtResource("8_ok7wh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Caja_Movible" unique_id=532786109]
 texture = ExtResource("3_g5y43")
