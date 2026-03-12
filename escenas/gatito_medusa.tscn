@@ -1,83 +1,16 @@
 [gd_scene format=3 uid="uid://cil0x3u4hswm0"]
 
 [ext_resource type="Script" uid="uid://pd0knc0mucsd" path="res://Scrips/gatito_medusa.gd" id="1_rvxwu"]
-[ext_resource type="Texture2D" uid="uid://bl0n6dygyrc2i" path="res://assets/Blob_assets/medusa_Gatito.png" id="2_6dukv"]
+[ext_resource type="Texture2D" uid="uid://b8gp3u4fpeds" path="res://assets/bomba.png" id="2_rvxwu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dukv"]
 size = Vector2(41, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lvch6"]
-atlas = ExtResource("2_6dukv")
-region = Rect2(0, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rggcg"]
-atlas = ExtResource("2_6dukv")
-region = Rect2(55, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0trs2"]
-atlas = ExtResource("2_6dukv")
-region = Rect2(110, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_urixr"]
-atlas = ExtResource("2_6dukv")
-region = Rect2(165, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4oh4w"]
-atlas = ExtResource("2_6dukv")
-region = Rect2(220, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_by4ww"]
-atlas = ExtResource("2_6dukv")
-region = Rect2(275, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v0a03"]
-atlas = ExtResource("2_6dukv")
-region = Rect2(330, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a557i"]
-atlas = ExtResource("2_6dukv")
-region = Rect2(385, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ja2lo"]
-atlas = ExtResource("2_6dukv")
-region = Rect2(440, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3oyo2"]
-atlas = ExtResource("2_6dukv")
-region = Rect2(495, 0, 55, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dc043"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lvch6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rggcg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0trs2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_urixr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4oh4w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_by4ww")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v0a03")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a557i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ja2lo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3oyo2")
+"texture": ExtResource("2_rvxwu")
 }],
 "loop": true,
 "name": &"medusa_gatito",
@@ -100,10 +33,11 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_6dukv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=910199862]
+position = Vector2(0, 2.0000002)
+scale = Vector2(0.7734375, 0.7421875)
 sprite_frames = SubResource("SpriteFrames_dc043")
 animation = &"medusa_gatito"
 autoplay = "medusa_gatito"
-frame = 9
 frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2109513690]
