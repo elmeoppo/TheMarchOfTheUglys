@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://85p41am3b8eb"
-path="res://.godot/imported/rojo.png-7e34571ac5dc3b6a6eecdfc38c91fa8b.ctex"
+uid="uid://bpj5vpcc32cq7"
+path="res://.godot/imported/1.png-01153dfa953f013888c96fd9629a26f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rojo.png"
-dest_files=["res://.godot/imported/rojo.png-7e34571ac5dc3b6a6eecdfc38c91fa8b.ctex"]
+source_file="res://assets/Barra_assets/1.png"
+dest_files=["res://.godot/imported/1.png-01153dfa953f013888c96fd9629a26f6.ctex"]
 
 [params]
 

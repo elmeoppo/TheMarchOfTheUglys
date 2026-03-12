@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1fukyn2osqqp"
-path="res://.godot/imported/barra_Stamina.png-04d7ae1e9ae06f4c98a6bc2d8432c3c2.ctex"
+uid="uid://85p41am3b8eb"
+path="res://.godot/imported/rojo.png-0c8757c010f158cb9d98bf84a0acd064.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Blob_assets/barra_Stamina.png"
-dest_files=["res://.godot/imported/barra_Stamina.png-04d7ae1e9ae06f4c98a6bc2d8432c3c2.ctex"]
+source_file="res://assets/Barra_assets/rojo.png"
+dest_files=["res://.godot/imported/rojo.png-0c8757c010f158cb9d98bf84a0acd064.ctex"]
 
 [params]
 

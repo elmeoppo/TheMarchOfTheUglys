@@ -7,6 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpodt"]
 size = Vector2(187, 114)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njcx7"]
+size = Vector2(187, 114)
+
 [node name="Jugador" type="CharacterBody2D" unique_id=2018510561]
 script = ExtResource("1_jpodt")
 
@@ -21,7 +24,7 @@ autoplay = "idle"
 frame = 13
 frame_progress = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=188312609]
+[node name="hitbox_player" type="CollisionShape2D" parent="." unique_id=188312609]
 position = Vector2(-1.5, -7)
 shape = SubResource("RectangleShape2D_jpodt")
 
@@ -30,3 +33,9 @@ shape = SubResource("RectangleShape2D_jpodt")
 [node name="dañador" type="Node2D" parent="." unique_id=148577782 node_paths=PackedStringArray("player")]
 script = ExtResource("3_njcx7")
 player = NodePath("..")
+
+[node name="area_player" type="Area2D" parent="." unique_id=2099295291]
+
+[node name="area_pez" type="CollisionShape2D" parent="area_player" unique_id=557016664]
+position = Vector2(-1.5, -7)
+shape = SubResource("RectangleShape2D_njcx7")

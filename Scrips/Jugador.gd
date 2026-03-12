@@ -1,6 +1,9 @@
 extends CharacterBody2D
 class_name Player
 
+@onready var hitbox_player: CollisionShape2D = $hitbox_player
+@onready var barra: TextureProgressBar = $Capa/Barra
+
 @export var multiplicador_velocidad : int = 2
 var entera : int = 1
 var flot : float = 1
@@ -24,6 +27,27 @@ var tocando_piso : bool:
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var timer: Timer = $Timer
 
+#Variables vida
+
+signal vida_cambiada(nueva_vida)
+
+var vida_max: int = 100
+var vida_minima = 0
+var vida_actual: int = 100
+
+func recibir_daño(value):
+	vida_actual -= value
+	vida_actual = clamp(vida_actual, 0 , vida_max)
+	
+	vida_cambiada.emit(vida_actual)
+	
+	print("Vida restante: ", vida_actual)
+	if vida_actual <= 0:
+		morir()
+
+func morir():
+	get_tree().reload_current_scene()
+
 #VARIABLES DE VELOCIDAD Y GRAVEDAD
 #hola
 
@@ -34,7 +58,6 @@ signal stop
 signal saltos_maximos_alcanzados
 signal toco_piso
 signal cambio_saltos_dados
-
 @export var gravedad_agua : float = 350.0
 
 #VARIABLES DE MAXIMO NUMERO DE SALTOS
@@ -47,14 +70,18 @@ signal cambio_saltos_dados
 @export var ultimo_salto_registrado : int = -1
 
 var cansado : bool = false
-var modo_nyan : bool =false 
+var modo_nyan : bool =false
 
 func _ready() -> void:
+	
 	moving.connect(_on_moving)
 	stop.connect(_on_stop)
 	saltos_maximos_alcanzados.connect(_on_max_saltos)
 	toco_piso.connect(_on_tocar_piso)
 	timer.timeout.connect(_termino_recuperacion_tiempo)
+	
+
+
 
 func _physics_process(delta: float) -> void:
 	#print(timer.time_left)
@@ -133,3 +160,4 @@ func final_nyan_mode():
 	modo_nyan = false
 	animated_sprite_2d.play("idle")
 	SPEED = SPEED / multiplicador_velocidad
+	
