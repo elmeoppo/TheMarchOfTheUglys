@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://4bl4kyp0t3w7"]
+
+[ext_resource type="Script" uid="uid://c0skkq0s2ov3a" path="res://Scrips/cereza.gd" id="1_qovx5"]
+[ext_resource type="Texture2D" uid="uid://wv3ned6n2oep" path="res://assets/Frutas/cereza.png" id="1_u2mon"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qovx5"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tveeb"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1ans"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8wku"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3p6q"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_822xm"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr332"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ramav"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h18j6"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1s1g"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0d0un"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3sgv"]
+atlas = ExtResource("1_u2mon")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hkwex"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qovx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tveeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1ans")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8wku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3p6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_822xm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr332")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ramav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h18j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1s1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0d0un")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3sgv")
+}],
+"loop": true,
+"name": &"cereza",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qu17"]
+
+[node name="cereza" type="Node2D" unique_id=1777420676]
+scale = Vector2(4, 4)
+script = ExtResource("1_qovx5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1327447170]
+sprite_frames = SubResource("SpriteFrames_hkwex")
+animation = &"cereza"
+autoplay = "cereza"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1896334984]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1043602317]
+shape = SubResource("RectangleShape2D_0qu17")

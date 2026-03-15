@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://cil0x3u4hswm0" path="res://escenas/mina.tscn" id="10_r0g7c"]
 [ext_resource type="PackedScene" uid="uid://dpyue530n5v3a" path="res://escenas/fresa.tscn" id="11_htfqa"]
 [ext_resource type="Texture2D" uid="uid://cdl22sbtu07dr" path="res://assets/cadenas.png" id="12_2end1"]
+[ext_resource type="PackedScene" uid="uid://cx3nv71yl61rh" path="res://escenas/sandia.tscn" id="12_uxhy3"]
+[ext_resource type="PackedScene" uid="uid://4bl4kyp0t3w7" path="res://escenas/cereza.tscn" id="13_srhhh"]
+[ext_resource type="PackedScene" uid="uid://34ivnbetxflf" path="res://escenas/erizo_de_mar.tscn" id="15_uxgvi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cey3t"]
 atlas = ExtResource("5_g5y43")
@@ -160,8 +163,11 @@ scale = Vector2(2, 2)
 [node name="Fresa" parent="Frutas" unique_id=736862643 instance=ExtResource("11_htfqa")]
 position = Vector2(-177, 52)
 
-[node name="Fresa2" parent="Frutas" unique_id=1158165015 instance=ExtResource("11_htfqa")]
-position = Vector2(-177, -41)
+[node name="Sandia" parent="Frutas" unique_id=1219563134 instance=ExtResource("12_uxhy3")]
+position = Vector2(-186, -114)
+
+[node name="cereza" parent="Frutas" unique_id=1777420676 instance=ExtResource("13_srhhh")]
+position = Vector2(-637, -10)
 
 [node name="piso" type="Node" parent="." unique_id=1448399118]
 
@@ -432,8 +438,9 @@ shape = SubResource("RectangleShape2D_00qvt")
 [node name="gatito_medusa" parent="." unique_id=98317404 instance=ExtResource("10_r0g7c")]
 position = Vector2(719, -93.00001)
 scale = Vector2(5, 5)
-collision_layer = 10
-collision_mask = 4
+
+[node name="erizo_de_mar" parent="." unique_id=1668810766 instance=ExtResource("15_uxgvi")]
+position = Vector2(229, 82)
 
 [node name="Cadena" type="StaticBody2D" parent="." unique_id=1332707245]
 position = Vector2(711, 66)

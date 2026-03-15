@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://cx3nv71yl61rh"]
+
+[ext_resource type="Script" uid="uid://c7esloo0axowk" path="res://Scrips/sandia.gd" id="1_b3njr"]
+[ext_resource type="Texture2D" uid="uid://dsjvqcmhtpchb" path="res://assets/Frutas/sandia.png" id="2_48emi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je4b4"]
+atlas = ExtResource("2_48emi")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3ov2"]
+atlas = ExtResource("2_48emi")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phmdw"]
+atlas = ExtResource("2_48emi")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnspt"]
+atlas = ExtResource("2_48emi")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p807g"]
+atlas = ExtResource("2_48emi")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1m0ax"]
+atlas = ExtResource("2_48emi")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34cit"]
+atlas = ExtResource("2_48emi")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rm56t"]
+atlas = ExtResource("2_48emi")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a308h"]
+atlas = ExtResource("2_48emi")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jvun"]
+atlas = ExtResource("2_48emi")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ers01"]
+atlas = ExtResource("2_48emi")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ato15"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_je4b4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3ov2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phmdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnspt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p807g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1m0ax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34cit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rm56t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a308h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jvun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ers01")
+}],
+"loop": true,
+"name": &"sandia",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlb6v"]
+size = Vector2(5.875, 3.375)
+
+[node name="Sandia" type="Node2D" unique_id=1219563134]
+scale = Vector2(4, 4)
+script = ExtResource("1_b3njr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=595256496]
+sprite_frames = SubResource("SpriteFrames_ato15")
+animation = &"sandia"
+autoplay = "sandia"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1973312453]
+scale = Vector2(4, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=853157365]
+position = Vector2(-0.625, 0.125)
+shape = SubResource("RectangleShape2D_hlb6v")

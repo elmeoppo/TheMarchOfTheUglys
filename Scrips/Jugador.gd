@@ -38,8 +38,8 @@ var vida_actual: int = 6
 func recibir_daño(value):
 	vida_actual -= value
 	vida_actual = clamp(vida_actual, 0 , vida_max)
-	
 	vida_cambiada.emit(vida_actual)
+
 	
 	print("Vida restante: ", vida_actual)
 	if vida_actual <= 0:
