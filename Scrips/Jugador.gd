@@ -34,17 +34,33 @@ signal vida_cambiada(nueva_vida)
 var vida_max: int = 6
 var vida_minima = 0
 var vida_actual: int = 6
+var invencible : bool = false
 
 func recibir_daño(value):
-	vida_actual -= value
-	vida_actual = clamp(vida_actual, 0 , vida_max)
-	vida_cambiada.emit(vida_actual)
-
 	
-	print("Vida restante: ", vida_actual)
-	if vida_actual <= 0:
-		morir()
-
+	if not invencible:
+		
+		vida_actual -= value
+		vida_actual = clamp(vida_actual, 0 , vida_max)
+		vida_cambiada.emit(vida_actual)
+		print("Vida restante: ", vida_actual)
+		
+		if vida_actual <= 0:
+			morir()
+		
+		if not herido:
+			herido = true
+			animated_sprite_2d.play("lloron")
+			await get_tree().create_timer(3.0).timeout
+			herido = false
+			if direction != 0.0:
+				_on_moving(direction)
+			else:
+				_on_stop()
+				
+	elif invencible:
+		pass
+	
 func morir():
 	get_tree().reload_current_scene()
 
@@ -71,6 +87,7 @@ signal cambio_saltos_dados
 
 var cansado : bool = false
 var modo_nyan : bool =false
+var herido : bool = false
 
 func _ready() -> void:
 	
@@ -105,6 +122,7 @@ func _input(event: InputEvent) -> void:
 
 func animacion_salto():
 	
+	if herido: return
 	if not modo_nyan:
 		animated_sprite_2d.play("salto")
 
@@ -120,7 +138,8 @@ func _evaluar_saltos():
 
 func _on_tocar_piso():
 	print("TOCANDO PISO")
-	animated_sprite_2d.play("idle")
+	if not herido:
+		animated_sprite_2d.play("idle")
 	timer.start(3.0)
 
 func _termino_recuperacion_tiempo():
@@ -131,6 +150,8 @@ func _termino_recuperacion_tiempo():
 		timer.stop()
 
 func _on_moving(dir: float) -> void:
+	if herido: return
+	
 	if not cansado and not modo_nyan:
 		animated_sprite_2d.play("walk")
 	elif cansado and not modo_nyan:
@@ -144,9 +165,11 @@ func _on_moving(dir: float) -> void:
 	
 
 func _on_stop() -> void:
+	if herido: return
 	animated_sprite_2d.play("idle")
 
 func _on_max_saltos():
+	if herido: return
 	animated_sprite_2d.play("sudor")
 
 func prueba ():
@@ -157,9 +180,11 @@ func inicio_nyan_mode():
 	modo_nyan = true
 	animated_sprite_2d.play("nyan")
 	SPEED = SPEED * multiplicador_velocidad
+	invencible = true
 
 func final_nyan_mode():
 	print ("termina")
 	modo_nyan = false
 	animated_sprite_2d.play("idle")
 	SPEED = SPEED / multiplicador_velocidad
+	invencible = false

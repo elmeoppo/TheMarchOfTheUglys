@@ -6,5 +6,3 @@ class_name erizo_mar
 func _on_area_2d_body_entered(body):
 	if body is Player : 
 		body.recibir_daño(daño)
-
-	

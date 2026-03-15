@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://d26rrv2msfked"]
+
+[ext_resource type="Texture2D" uid="uid://bb3dye4crcigu" path="res://assets/peces/extra 2 morado.png" id="1_787ym"]
+[ext_resource type="Texture2D" uid="uid://rkmmcqh1ru58" path="res://assets/peces/extra 2 rojo.png" id="2_0vjuy"]
+[ext_resource type="Texture2D" uid="uid://gy5yga0q64j3" path="res://assets/peces/extra 3 amarillo.png" id="3_vyk7u"]
+[ext_resource type="Texture2D" uid="uid://dl6bp1im60vlr" path="res://assets/peces/extra 3 naranja.png" id="4_dqcsd"]
+[ext_resource type="Texture2D" uid="uid://d1x3oyiwjar4d" path="res://assets/peces/extra 3 rosa.png" id="5_1way2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyvrs"]
+size = Vector2(28, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsdsb"]
+size = Vector2(28, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvpgp"]
+size = Vector2(28, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0o7"]
+size = Vector2(28, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbn54"]
+size = Vector2(28, 22)
+
+[sub_resource type="Animation" id="Animation_7vtuy"]
+resource_name = "peces_nadando"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3wntg"]
+_data = {
+&"peces_nadando": SubResource("Animation_7vtuy")
+}
+
+[node name="peces" type="Node" unique_id=1176285529]
+
+[node name="pez1" type="StaticBody2D" parent="." unique_id=507560816]
+position = Vector2(-3, -96)
+
+[node name="Sprite2D" type="Sprite2D" parent="pez1" unique_id=990832456]
+texture = ExtResource("1_787ym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pez1" unique_id=20224067]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_fyvrs")
+
+[node name="pez2" type="StaticBody2D" parent="." unique_id=1414971785]
+position = Vector2(79, -62)
+
+[node name="Sprite2D" type="Sprite2D" parent="pez2" unique_id=1212988289]
+texture = ExtResource("2_0vjuy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pez2" unique_id=1200203192]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rsdsb")
+
+[node name="pez3" type="StaticBody2D" parent="." unique_id=1154737761]
+position = Vector2(-41, -19)
+
+[node name="Sprite2D" type="Sprite2D" parent="pez3" unique_id=1141967433]
+texture = ExtResource("3_vyk7u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pez3" unique_id=1172672085]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_rvpgp")
+
+[node name="pez4" type="StaticBody2D" parent="." unique_id=45772550]
+position = Vector2(-33, -59)
+
+[node name="Sprite2D" type="Sprite2D" parent="pez4" unique_id=96912223]
+texture = ExtResource("4_dqcsd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pez4" unique_id=1825960532]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_1f0o7")
+
+[node name="pez5" type="StaticBody2D" parent="." unique_id=1124307268]
+position = Vector2(36, -35)
+
+[node name="Sprite2D" type="Sprite2D" parent="pez5" unique_id=208396309]
+texture = ExtResource("5_1way2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pez5" unique_id=1393912824]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_fbn54")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1883149662]
+libraries/ = SubResource("AnimationLibrary_3wntg")
