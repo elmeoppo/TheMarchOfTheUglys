@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dos786ckdubxb"
-path="res://.godot/imported/Fondo_1.png-dea47b987e7168418234ad0ef396875a.ctex"
+uid="uid://cnfqy51swoqya"
+path="res://.godot/imported/fondo_marino.png-c4ac528a83804fd0e3e20330d6ad7e04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fondo_1.png"
-dest_files=["res://.godot/imported/Fondo_1.png-dea47b987e7168418234ad0ef396875a.ctex"]
+source_file="res://assets/fondo_marino.png"
+dest_files=["res://.godot/imported/fondo_marino.png-c4ac528a83804fd0e3e20330d6ad7e04.ctex"]
 
 [params]
 

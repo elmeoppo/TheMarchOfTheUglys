@@ -4,6 +4,7 @@ class_name BarraStamina
 @onready var barra: TextureProgressBar = $Capa/Barra
 @onready var tiempo_n: Label = $Capa/Tiempo_n
 @export var cantidad_manzanas: Cantidad_manzana
+@onready var contador_frutas: Label = $Capa/contador_frutas
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,3 +19,5 @@ func _on_saltos_cambio():
 
 func _process(delta: float) -> void:
 	tiempo_n.text = str(int (cantidad_manzanas.timer.time_left))
+	contador_frutas.text = str(cantidad_manzanas._manzanas_recogidas)
+	
