@@ -2,7 +2,6 @@ extends CharacterBody2D
 class_name Player
 
 @onready var hitbox_player: CollisionShape2D = $hitbox_player
-@onready var barra: TextureProgressBar = $Capa/Barra
 
 @export var multiplicador_velocidad : int = 2
 var entera : int = 1
@@ -119,6 +118,11 @@ func _input(event: InputEvent) -> void:
 	# Manejar salto
 	if event.is_action_pressed("salto"):
 		_evaluar_saltos()
+	
+	if event.is_action_pressed("reinicio"):
+		morir()
+		
+
 
 func animacion_salto():
 	
