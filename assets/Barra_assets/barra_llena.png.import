@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://catom2lw01vuu"
-path="res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"
+uid="uid://buh4xaigrq0lh"
+path="res://.godot/imported/barra_llena.png-df47b92f0243af814dce2c11ded2c6b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bomba.png"
-dest_files=["res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"]
+source_file="res://assets/Barra_assets/barra_llena.png"
+dest_files=["res://.godot/imported/barra_llena.png-df47b92f0243af814dce2c11ded2c6b4.ctex"]
 
 [params]
 

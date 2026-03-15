@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://catom2lw01vuu"
-path="res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"
+uid="uid://cdl22sbtu07dr"
+path="res://.godot/imported/cadenas.png-c978276674a975c78c22261f729d790e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bomba.png"
-dest_files=["res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"]
+source_file="res://assets/cadenas.png"
+dest_files=["res://.godot/imported/cadenas.png-c978276674a975c78c22261f729d790e.ctex"]
 
 [params]
 

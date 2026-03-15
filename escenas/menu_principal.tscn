@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bo6h12jdfe2og"]
+
+[ext_resource type="Texture2D" uid="uid://bj32y2o07t3c2" path="res://assets/icon.svg" id="1_37xja"]
+
+[node name="Menu_Principal" type="Control" unique_id=1011783831]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1248881116]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 320.0
+offset_right = 640.0
+offset_bottom = 448.0
+texture_normal = ExtResource("1_37xja")

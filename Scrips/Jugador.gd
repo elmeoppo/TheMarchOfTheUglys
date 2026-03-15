@@ -31,9 +31,9 @@ var tocando_piso : bool:
 
 signal vida_cambiada(nueva_vida)
 
-var vida_max: int = 100
+var vida_max: int = 6
 var vida_minima = 0
-var vida_actual: int = 100
+var vida_actual: int = 6
 
 func recibir_daño(value):
 	vida_actual -= value
@@ -79,9 +79,6 @@ func _ready() -> void:
 	saltos_maximos_alcanzados.connect(_on_max_saltos)
 	toco_piso.connect(_on_tocar_piso)
 	timer.timeout.connect(_termino_recuperacion_tiempo)
-	
-
-
 
 func _physics_process(delta: float) -> void:
 	#print(timer.time_left)
@@ -93,6 +90,12 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	if position.y >= 1000 :
+		morir()
+	else:
+		pass
+	
 	move_and_slide()
 
 func _input(event: InputEvent) -> void:
@@ -160,4 +163,3 @@ func final_nyan_mode():
 	modo_nyan = false
 	animated_sprite_2d.play("idle")
 	SPEED = SPEED / multiplicador_velocidad
-	

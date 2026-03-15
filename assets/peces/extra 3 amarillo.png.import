@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://catom2lw01vuu"
-path="res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"
+uid="uid://gy5yga0q64j3"
+path="res://.godot/imported/extra 3 amarillo.png-63a75fe9e8e39e2c0389d17466b553e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bomba.png"
-dest_files=["res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"]
+source_file="res://assets/peces/extra 3 amarillo.png"
+dest_files=["res://.godot/imported/extra 3 amarillo.png-63a75fe9e8e39e2c0389d17466b553e9.ctex"]
 
 [params]
 

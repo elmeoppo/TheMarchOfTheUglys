@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://catom2lw01vuu"
-path="res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"
+uid="uid://yng3owg0ikl7"
+path="res://.godot/imported/fresa.png-0d76a704a29d4d1c10ee5e9aed9626cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bomba.png"
-dest_files=["res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"]
+source_file="res://assets/Frutas/fresa.png"
+dest_files=["res://.godot/imported/fresa.png-0d76a704a29d4d1c10ee5e9aed9626cf.ctex"]
 
 [params]
 

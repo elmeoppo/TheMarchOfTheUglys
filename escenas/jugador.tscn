@@ -4,13 +4,15 @@
 [ext_resource type="SpriteFrames" uid="uid://bt6uuaqou8v4d" path="res://assets/Blob_assets/new_sprite_frames.tres" id="2_njcx7"]
 [ext_resource type="Script" uid="uid://yqais7rdsgcr" path="res://Scrips/dañador.gd" id="3_njcx7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpodt"]
-size = Vector2(187, 114)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_njcx7"]
+radius = 49.10603
+height = 181.08945
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njcx7"]
-size = Vector2(187, 114)
+size = Vector2(187, 113)
 
 [node name="Jugador" type="CharacterBody2D" unique_id=2018510561]
+collision_mask = 12
 script = ExtResource("1_jpodt")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1343267365]
@@ -19,14 +21,13 @@ zoom = Vector2(0.5, 0.5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=756730548]
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_njcx7")
-animation = &"salto"
+animation = &"idle"
 autoplay = "idle"
-frame = 13
-frame_progress = 1.0
 
 [node name="hitbox_player" type="CollisionShape2D" parent="." unique_id=188312609]
 position = Vector2(-1.5, -7)
-shape = SubResource("RectangleShape2D_jpodt")
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_njcx7")
 
 [node name="Timer" type="Timer" parent="." unique_id=27871646]
 
@@ -37,5 +38,5 @@ player = NodePath("..")
 [node name="area_player" type="Area2D" parent="." unique_id=2099295291]
 
 [node name="area_pez" type="CollisionShape2D" parent="area_player" unique_id=557016664]
-position = Vector2(-1.5, -7)
+position = Vector2(-1.5, -7.5)
 shape = SubResource("RectangleShape2D_njcx7")

@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://c0i5q50ttteum"]
 
 [ext_resource type="Script" uid="uid://cotjvt2cjskr5" path="res://Scrips/barra_vida.gd" id="1_6f20q"]
-[ext_resource type="Texture2D" uid="uid://85p41am3b8eb" path="res://assets/Barra_assets/rojo.png" id="1_ke1wd"]
-[ext_resource type="Texture2D" uid="uid://1fukyn2osqqp" path="res://assets/Barra_assets/barra_Stamina.png" id="2_6f20q"]
-[ext_resource type="Texture2D" uid="uid://cxlxj6aghd3ag" path="res://assets/Barra_assets/2.png" id="3_owjt5"]
+[ext_resource type="Texture2D" uid="uid://c73ibp35k1bm6" path="res://assets/Barra_assets/barra_vacia.png" id="2_ke1wd"]
+[ext_resource type="Texture2D" uid="uid://buh4xaigrq0lh" path="res://assets/Barra_assets/barra_llena.png" id="3_6f20q"]
 
 [node name="barra_vida" type="Control" unique_id=1598866872]
 layout_mode = 3
@@ -17,13 +16,18 @@ script = ExtResource("1_6f20q")
 [node name="Capa" type="CanvasLayer" parent="." unique_id=1803406352]
 
 [node name="Barra" type="TextureProgressBar" parent="Capa" unique_id=275705508]
-offset_left = 1153.0
-offset_top = 63.0
-offset_right = 2320.0
-offset_bottom = 232.0
-rotation = -3.141586
-scale = Vector2(0.4, 0.36)
-texture_under = ExtResource("3_owjt5")
-texture_over = ExtResource("2_6f20q")
-texture_progress = ExtResource("1_ke1wd")
+anchors_preset = -1
+anchor_left = 0.89500004
+anchor_top = 0.058000002
+anchor_right = 0.89500004
+anchor_bottom = 0.058000002
+offset_left = -115.0401
+offset_top = -17.584002
+offset_right = 100.95996
+offset_bottom = 54.416
+rotation = -0.006733501
+scale = Vector2(1, 0.9)
+max_value = 6.0
+texture_under = ExtResource("2_ke1wd")
+texture_progress = ExtResource("3_6f20q")
 metadata/_edit_use_anchors_ = true

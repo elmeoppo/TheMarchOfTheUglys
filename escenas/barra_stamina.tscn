@@ -6,6 +6,113 @@
 [ext_resource type="Texture2D" uid="uid://cxlxj6aghd3ag" path="res://assets/Barra_assets/2.png" id="4_23jcm"]
 [ext_resource type="FontFile" uid="uid://qmxifrs3b331" path="res://Fonts/Daydream DEMO.otf" id="5_qqfyd"]
 [ext_resource type="Texture2D" uid="uid://bj32y2o07t3c2" path="res://assets/icon.svg" id="6_23jcm"]
+[ext_resource type="Texture2D" uid="uid://e2cn1ikfulcg" path="res://assets/Blob_assets/blobfish saltando-sheet.png" id="7_044pn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfh5p"]
+atlas = ExtResource("7_044pn")
+region = Rect2(0, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ov3y"]
+atlas = ExtResource("7_044pn")
+region = Rect2(120, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1i8u"]
+atlas = ExtResource("7_044pn")
+region = Rect2(240, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctoal"]
+atlas = ExtResource("7_044pn")
+region = Rect2(360, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raj1u"]
+atlas = ExtResource("7_044pn")
+region = Rect2(480, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3n12k"]
+atlas = ExtResource("7_044pn")
+region = Rect2(600, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wurvy"]
+atlas = ExtResource("7_044pn")
+region = Rect2(720, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_er37a"]
+atlas = ExtResource("7_044pn")
+region = Rect2(840, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63omq"]
+atlas = ExtResource("7_044pn")
+region = Rect2(960, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikms7"]
+atlas = ExtResource("7_044pn")
+region = Rect2(1080, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fa0jo"]
+atlas = ExtResource("7_044pn")
+region = Rect2(1200, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5gxv"]
+atlas = ExtResource("7_044pn")
+region = Rect2(1320, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axj4s"]
+atlas = ExtResource("7_044pn")
+region = Rect2(1440, 0, 120, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlga5"]
+atlas = ExtResource("7_044pn")
+region = Rect2(1560, 0, 120, 97)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yio1t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfh5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ov3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1i8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctoal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raj1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3n12k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wurvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_er37a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63omq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikms7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fa0jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5gxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axj4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlga5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
 
 [node name="BarraStamina" type="Control" unique_id=667103573]
 layout_mode = 3
@@ -17,6 +124,11 @@ grow_vertical = 2
 script = ExtResource("1_ah7va")
 
 [node name="Capa" type="CanvasLayer" parent="." unique_id=1838006035]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Capa" unique_id=1531193662]
+position = Vector2(89, 214)
+sprite_frames = SubResource("SpriteFrames_yio1t")
+autoplay = "default"
 
 [node name="Barra" type="TextureProgressBar" parent="Capa" unique_id=1624514734]
 offset_left = 467.0

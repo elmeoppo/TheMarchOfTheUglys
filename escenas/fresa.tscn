@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://dpyue530n5v3a"]
+
+[ext_resource type="Script" uid="uid://bmmdqmvogrsgh" path="res://Scrips/fresa.gd" id="1_n4uii"]
+[ext_resource type="Texture2D" uid="uid://yng3owg0ikl7" path="res://assets/Frutas/fresa.png" id="2_k8626"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cppb7"]
+atlas = ExtResource("2_k8626")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nce1v"]
+atlas = ExtResource("2_k8626")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j8kx"]
+atlas = ExtResource("2_k8626")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_107yu"]
+atlas = ExtResource("2_k8626")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbebc"]
+atlas = ExtResource("2_k8626")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f24b7"]
+atlas = ExtResource("2_k8626")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t37ud"]
+atlas = ExtResource("2_k8626")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuwgj"]
+atlas = ExtResource("2_k8626")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bswcq"]
+atlas = ExtResource("2_k8626")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md6xr"]
+atlas = ExtResource("2_k8626")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfkj8"]
+atlas = ExtResource("2_k8626")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnm8e"]
+atlas = ExtResource("2_k8626")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cxi1x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cppb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nce1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3j8kx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_107yu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbebc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f24b7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t37ud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uuwgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bswcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md6xr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfkj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnm8e")
+}],
+"loop": true,
+"name": &"fresa",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dn6m2"]
+size = Vector2(55, 72)
+
+[node name="Fresa" type="Node2D" unique_id=736862643]
+script = ExtResource("1_n4uii")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1895183229]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_cxi1x")
+animation = &"fresa"
+autoplay = "fresa"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1891320893]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1372881324]
+position = Vector2(0.5, 6)
+shape = SubResource("RectangleShape2D_dn6m2")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://catom2lw01vuu"
-path="res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"
+uid="uid://dsjvqcmhtpchb"
+path="res://.godot/imported/sandia.png-a8d5e0f22caab17a602e9ee95c0d9340.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bomba.png"
-dest_files=["res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"]
+source_file="res://assets/Frutas/sandia.png"
+dest_files=["res://.godot/imported/sandia.png-a8d5e0f22caab17a602e9ee95c0d9340.ctex"]
 
 [params]
 

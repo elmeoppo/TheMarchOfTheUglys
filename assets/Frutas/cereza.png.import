@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://catom2lw01vuu"
-path="res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"
+uid="uid://wv3ned6n2oep"
+path="res://.godot/imported/cereza.png-12102af475d15802fa46d76c40b56317.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bomba.png"
-dest_files=["res://.godot/imported/bomba.png-168fa689b6caab9c5e7a94bffc940181.ctex"]
+source_file="res://assets/Frutas/cereza.png"
+dest_files=["res://.godot/imported/cereza.png-12102af475d15802fa46d76c40b56317.ctex"]
 
 [params]
 
