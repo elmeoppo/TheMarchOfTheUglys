@@ -15,6 +15,10 @@ run/main_scene="uid://u1ehn2f7a005"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="uid://skdlni3c16w8"
 
+[autoload]
+
+MusicaFondo="*uid://6jfjnfceuxgy"
+
 [input]
 
 arriba={

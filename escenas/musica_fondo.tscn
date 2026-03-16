@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://6jfjnfceuxgy"]
+
+[ext_resource type="AudioStream" uid="uid://byhv1l1o652l3" path="res://assets/Sergio's Magic Dustbin.mp3" id="1_fodoa"]
+
+[node name="musica_fondo" type="Node2D" unique_id=500615459]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1423968643]
+stream = ExtResource("1_fodoa")
+autoplay = true

@@ -4,10 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://d3fnwhoxgwm8a" path="res://escenas/barra_stamina.tscn" id="2_5bxjq"]
 [ext_resource type="PackedScene" uid="uid://c0i5q50ttteum" path="res://escenas/barra_vida.tscn" id="3_kpmgh"]
 [ext_resource type="PackedScene" uid="uid://c8rbk3dug2flk" path="res://escenas/jugador.tscn" id="4_6r2j4"]
-[ext_resource type="Script" uid="uid://dv3oercqt6wm3" path="res://Scrips/Medusa.gd" id="5_xq8jy"]
-[ext_resource type="Texture2D" uid="uid://bl0n6dygyrc2i" path="res://assets/Blob_assets/medusa_Gatito.png" id="6_6juyn"]
-[ext_resource type="Script" uid="uid://bicng0twq3dnn" path="res://Scrips/caja_movible.gd" id="7_rn4qs"]
-[ext_resource type="Texture2D" uid="uid://bj32y2o07t3c2" path="res://assets/icon.svg" id="8_x5o5w"]
 [ext_resource type="PackedScene" uid="uid://do2k3tbp02u4d" path="res://escenas/cantidad_manzanas.tscn" id="9_mwgmh"]
 [ext_resource type="PackedScene" uid="uid://dj8rgici0te0l" path="res://escenas/manzana.tscn" id="10_m8y22"]
 [ext_resource type="PackedScene" uid="uid://dpyue530n5v3a" path="res://escenas/fresa.tscn" id="11_6vh84"]
@@ -19,94 +15,17 @@
 [ext_resource type="Texture2D" uid="uid://cdl22sbtu07dr" path="res://assets/cadenas.png" id="16_gyqeu"]
 [ext_resource type="PackedScene" uid="uid://ca60rw1hxy4qs" path="res://escenas/piso_A.tscn" id="17_l83ds"]
 [ext_resource type="Texture2D" uid="uid://cnfqy51swoqya" path="res://assets/fondo_marino.png" id="19_5bxjq"]
+[ext_resource type="PackedScene" uid="uid://cfe78r34qugud" path="res://escenas/piso_B.tscn" id="19_6r2j4"]
 [ext_resource type="Script" uid="uid://daxytv7le2jwb" path="res://Scrips/Fondo_movible.gd" id="19_kpmgh"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cey3t"]
-atlas = ExtResource("6_6juyn")
-region = Rect2(0, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_00qvt"]
-atlas = ExtResource("6_6juyn")
-region = Rect2(55, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uxwy7"]
-atlas = ExtResource("6_6juyn")
-region = Rect2(110, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yqmnl"]
-atlas = ExtResource("6_6juyn")
-region = Rect2(165, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r0g7c"]
-atlas = ExtResource("6_6juyn")
-region = Rect2(220, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ok7wh"]
-atlas = ExtResource("6_6juyn")
-region = Rect2(275, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2end1"]
-atlas = ExtResource("6_6juyn")
-region = Rect2(330, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_htfqa"]
-atlas = ExtResource("6_6juyn")
-region = Rect2(385, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uxhy3"]
-atlas = ExtResource("6_6juyn")
-region = Rect2(440, 0, 55, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_srhhh"]
-atlas = ExtResource("6_6juyn")
-region = Rect2(495, 0, 55, 50)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_uxgvi"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cey3t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_00qvt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uxwy7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yqmnl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r0g7c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ok7wh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2end1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_htfqa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uxhy3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_srhhh")
-}],
-"loop": true,
-"name": &"medusa_idle",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jggn"]
-size = Vector2(99, 120)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cey3t"]
-size = Vector2(126, 125)
+[ext_resource type="PackedScene" uid="uid://c2uc4alkukcw8" path="res://escenas/techo_a.tscn" id="20_rn4qs"]
+[ext_resource type="PackedScene" uid="uid://dl11r000nmimi" path="res://escenas/techo_b.tscn" id="21_x5o5w"]
+[ext_resource type="PackedScene" uid="uid://d0674a88rjl2i" path="res://escenas/techo_c.tscn" id="22_mwgmh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htfqa"]
 size = Vector2(22, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xulgr"]
+size = Vector2(128, 760)
 
 [node name="Mundo" type="Node2D" unique_id=700058469 node_paths=PackedStringArray("player")]
 script = ExtResource("1_xulgr")
@@ -130,63 +49,31 @@ player = NodePath("../Jugador")
 [node name="Jugador" parent="." unique_id=2018510561 instance=ExtResource("4_6r2j4")]
 position = Vector2(573, 508)
 
-[node name="medusa" type="RigidBody2D" parent="." unique_id=107545423]
-position = Vector2(1472, 384)
-collision_layer = 4
-collision_mask = 4
-script = ExtResource("5_xq8jy")
-
-[node name="medusa_gato" type="AnimatedSprite2D" parent="medusa" unique_id=638680306]
-position = Vector2(0.765625, 0.07426834)
-scale = Vector2(2.3357954, 2.517029)
-sprite_frames = SubResource("SpriteFrames_uxgvi")
-animation = &"medusa_idle"
-frame = 3
-frame_progress = 0.35068166
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="medusa" unique_id=2043841977]
-position = Vector2(-0.5, 3)
-shape = SubResource("RectangleShape2D_2jggn")
-
-[node name="Caja_Movible" type="RigidBody2D" parent="." unique_id=1990650094]
-position = Vector2(896, 192)
-collision_layer = 4
-collision_mask = 7
-freeze_mode = 1
-script = ExtResource("7_rn4qs")
-
-[node name="Sprite2D" type="Sprite2D" parent="Caja_Movible" unique_id=532786109]
-texture = ExtResource("8_x5o5w")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Caja_Movible" unique_id=447291083]
-position = Vector2(-1, -0.5)
-shape = SubResource("RectangleShape2D_cey3t")
-
 [node name="Frutas" parent="." unique_id=1719017421 node_paths=PackedStringArray("player") instance=ExtResource("9_mwgmh")]
 player = NodePath("../Jugador")
 
 [node name="Manzana" parent="Frutas" unique_id=1985196393 instance=ExtResource("10_m8y22")]
-position = Vector2(295, 520)
+position = Vector2(0, 384)
 scale = Vector2(2, 2)
 
 [node name="Fresa" parent="Frutas" unique_id=736862643 instance=ExtResource("11_6vh84")]
-position = Vector2(399, 564)
+position = Vector2(3968, 832)
 
 [node name="Sandia" parent="Frutas" unique_id=1219563134 instance=ExtResource("12_gs36m")]
 position = Vector2(390, 398)
 
 [node name="cereza" parent="Frutas" unique_id=1777420676 instance=ExtResource("13_sh8ar")]
-position = Vector2(-61, 502)
+position = Vector2(3072, 512)
 
 [node name="erizo_de_mar" parent="." unique_id=1668810766 instance=ExtResource("15_maaya")]
-position = Vector2(805, 594)
+position = Vector2(896, 576)
 
 [node name="medusa2" parent="." unique_id=605960123 instance=ExtResource("15_xulgr")]
-position = Vector2(1344, 576)
+position = Vector2(4736, 768)
 
 [node name="gatito_medusa" parent="." unique_id=98317404 instance=ExtResource("14_q3w73")]
-position = Vector2(-576, 575.99994)
-scale = Vector2(2.5, 2.5)
+position = Vector2(4160, 768)
+scale = Vector2(4, 4)
 
 [node name="Cadena" type="StaticBody2D" parent="gatito_medusa" unique_id=1332707245]
 position = Vector2(-1.5999908, 31.8)
@@ -202,35 +89,176 @@ texture = ExtResource("16_gyqeu")
 position = Vector2(3, 5)
 shape = SubResource("RectangleShape2D_htfqa")
 
-[node name="piso_mundo" type="Node" parent="." unique_id=777868215]
+[node name="gatito_medusa2" parent="." unique_id=1222002943 instance=ExtResource("14_q3w73")]
+position = Vector2(4672, 448)
+rotation = 3.1415927
+scale = Vector2(4, 4)
 
-[node name="piso" type="Node" parent="piso_mundo" unique_id=739604136]
+[node name="Cadena" type="StaticBody2D" parent="gatito_medusa2" unique_id=304836303]
+position = Vector2(-1.5999908, 31.8)
+scale = Vector2(0.19999999, 0.19999999)
+collision_layer = 0
+collision_mask = 0
 
-[node name="piso_A" parent="piso_mundo/piso" unique_id=843933475 instance=ExtResource("17_l83ds")]
-position = Vector2(384, 640)
+[node name="Sprite2D" type="Sprite2D" parent="gatito_medusa2/Cadena" unique_id=615789849]
+scale = Vector2(2, 2)
+texture = ExtResource("16_gyqeu")
 
-[node name="piso_A7" parent="piso_mundo/piso" unique_id=860696873 instance=ExtResource("17_l83ds")]
-position = Vector2(-1728, 640)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gatito_medusa2/Cadena" unique_id=1898527725]
+position = Vector2(3, 5)
+shape = SubResource("RectangleShape2D_htfqa")
 
-[node name="piso_A5" parent="piso_mundo/piso" unique_id=26731638 instance=ExtResource("17_l83ds")]
-position = Vector2(-320, 640)
+[node name="Text_Mundo" type="Node" parent="." unique_id=777868215]
 
-[node name="piso_A6" parent="piso_mundo/piso" unique_id=1285039513 instance=ExtResource("17_l83ds")]
-position = Vector2(-1024, 640)
+[node name="piso_A1" type="Node" parent="Text_Mundo" unique_id=739604136]
 
-[node name="piso_A2" parent="piso_mundo/piso" unique_id=280206069 instance=ExtResource("17_l83ds")]
-position = Vector2(1088, 640)
+[node name="piso_A" parent="Text_Mundo/piso_A1" unique_id=843933475 instance=ExtResource("17_l83ds")]
+position = Vector2(704, 640)
 
-[node name="piso_A3" parent="piso_mundo/piso" unique_id=1668016406 instance=ExtResource("17_l83ds")]
-position = Vector2(1792, 640)
+[node name="piso_A8" parent="Text_Mundo/piso_A1" unique_id=1846424968 instance=ExtResource("17_l83ds")]
+position = Vector2(-704, 640)
 
-[node name="piso_A4" parent="piso_mundo/piso" unique_id=933304980 instance=ExtResource("17_l83ds")]
+[node name="piso_A7" parent="Text_Mundo/piso_A1" unique_id=860696873 instance=ExtResource("17_l83ds")]
+position = Vector2(3200, 640)
+
+[node name="piso_A5" parent="Text_Mundo/piso_A1" unique_id=26731638 instance=ExtResource("17_l83ds")]
+position = Vector2(0, 640)
+
+[node name="piso_A2" parent="Text_Mundo/piso_A1" unique_id=280206069 instance=ExtResource("17_l83ds")]
+position = Vector2(1408, 640)
+
+[node name="piso_A3" parent="Text_Mundo/piso_A1" unique_id=1668016406 instance=ExtResource("17_l83ds")]
+position = Vector2(2112, 640)
+
+[node name="piso_A4" parent="Text_Mundo/piso_A1" unique_id=933304980 instance=ExtResource("17_l83ds")]
 position = Vector2(2496, 640)
+
+[node name="piso_A9" parent="Text_Mundo/piso_A1" unique_id=1534108395 instance=ExtResource("17_l83ds")]
+position = Vector2(3904, 896)
+
+[node name="piso_A10" parent="Text_Mundo/piso_A1" unique_id=2073937572 instance=ExtResource("17_l83ds")]
+position = Vector2(4608, 896)
+
+[node name="piso_A11" parent="Text_Mundo/piso_A1" unique_id=26020138 instance=ExtResource("17_l83ds")]
+position = Vector2(5312, 896)
+
+[node name="piso_A12" parent="Text_Mundo/piso_A1" unique_id=1797195859 instance=ExtResource("17_l83ds")]
+position = Vector2(6016, 896)
+
+[node name="piso_A13" parent="Text_Mundo/piso_A1" unique_id=133014266 instance=ExtResource("17_l83ds")]
+position = Vector2(6720, 896)
+
+[node name="piso_B1" type="Node" parent="Text_Mundo" unique_id=92624919]
+
+[node name="piso_B" parent="Text_Mundo/piso_B1" unique_id=77412424 instance=ExtResource("19_6r2j4")]
+position = Vector2(3200, 832)
+
+[node name="piso_B2" parent="Text_Mundo/piso_B1" unique_id=945628344 instance=ExtResource("19_6r2j4")]
+position = Vector2(2496, 832)
+
+[node name="Techo_A1" type="Node" parent="Text_Mundo" unique_id=1567112060]
+
+[node name="Techo_A3" parent="Text_Mundo/Techo_A1" unique_id=918223028 instance=ExtResource("20_rn4qs")]
+position = Vector2(4224, -512)
+
+[node name="Techo_A2" parent="Text_Mundo/Techo_A1" unique_id=378019020 instance=ExtResource("20_rn4qs")]
+position = Vector2(4224, -192)
+
+[node name="Techo_A" parent="Text_Mundo/Techo_A1" unique_id=583133022 instance=ExtResource("20_rn4qs")]
+position = Vector2(4224, 64)
+
+[node name="Techo_B1" type="Node" parent="Text_Mundo" unique_id=496803783]
+
+[node name="Techo_B" parent="Text_Mundo/Techo_B1" unique_id=1044569672 instance=ExtResource("21_x5o5w")]
+position = Vector2(7232, -64)
+
+[node name="Techo_C1" type="Node" parent="Text_Mundo" unique_id=1078204603]
+
+[node name="Techo_c7" parent="Text_Mundo/Techo_C1" unique_id=1871775075 instance=ExtResource("22_mwgmh")]
+position = Vector2(4480, -512)
+
+[node name="Techo_c6" parent="Text_Mundo/Techo_C1" unique_id=1246304783 instance=ExtResource("22_mwgmh")]
+position = Vector2(4480, -256)
+
+[node name="Techo_c9" parent="Text_Mundo/Techo_C1" unique_id=756684049 instance=ExtResource("22_mwgmh")]
+position = Vector2(4800, -512)
+
+[node name="Techo_c" parent="Text_Mundo/Techo_C1" unique_id=497098761 instance=ExtResource("22_mwgmh")]
+position = Vector2(4480, 64)
+
+[node name="Techo_c4" parent="Text_Mundo/Techo_C1" unique_id=1979142540 instance=ExtResource("22_mwgmh")]
+position = Vector2(4800, -256)
+
+[node name="Techo_c8" parent="Text_Mundo/Techo_C1" unique_id=816348892 instance=ExtResource("22_mwgmh")]
+position = Vector2(5120, -512)
+
+[node name="Techo_c2" parent="Text_Mundo/Techo_C1" unique_id=1181408340 instance=ExtResource("22_mwgmh")]
+position = Vector2(4800, 64)
+
+[node name="Techo_c5" parent="Text_Mundo/Techo_C1" unique_id=1579004073 instance=ExtResource("22_mwgmh")]
+position = Vector2(5120, -256)
+
+[node name="Techo_c3" parent="Text_Mundo/Techo_C1" unique_id=1336935177 instance=ExtResource("22_mwgmh")]
+position = Vector2(5120, 64)
+
+[node name="Techo_c10" parent="Text_Mundo/Techo_C1" unique_id=654418555 instance=ExtResource("22_mwgmh")]
+position = Vector2(5440, -512)
+
+[node name="Techo_c11" parent="Text_Mundo/Techo_C1" unique_id=485817471 instance=ExtResource("22_mwgmh")]
+position = Vector2(5440, -256)
+
+[node name="Techo_c12" parent="Text_Mundo/Techo_C1" unique_id=1424661574 instance=ExtResource("22_mwgmh")]
+position = Vector2(5760, -512)
+
+[node name="Techo_c13" parent="Text_Mundo/Techo_C1" unique_id=1493372933 instance=ExtResource("22_mwgmh")]
+position = Vector2(5440, 64)
+
+[node name="Techo_c14" parent="Text_Mundo/Techo_C1" unique_id=912478954 instance=ExtResource("22_mwgmh")]
+position = Vector2(5760, -256)
+
+[node name="Techo_c15" parent="Text_Mundo/Techo_C1" unique_id=23967849 instance=ExtResource("22_mwgmh")]
+position = Vector2(6080, -512)
+
+[node name="Techo_c16" parent="Text_Mundo/Techo_C1" unique_id=1195721693 instance=ExtResource("22_mwgmh")]
+position = Vector2(5760, 64)
+
+[node name="Techo_c17" parent="Text_Mundo/Techo_C1" unique_id=1551589143 instance=ExtResource("22_mwgmh")]
+position = Vector2(6080, -256)
+
+[node name="Techo_c18" parent="Text_Mundo/Techo_C1" unique_id=2012044195 instance=ExtResource("22_mwgmh")]
+position = Vector2(6080, 64)
+
+[node name="Techo_c19" parent="Text_Mundo/Techo_C1" unique_id=1389572437 instance=ExtResource("22_mwgmh")]
+position = Vector2(6400, -512)
+
+[node name="Techo_c20" parent="Text_Mundo/Techo_C1" unique_id=403537113 instance=ExtResource("22_mwgmh")]
+position = Vector2(6400, -256)
+
+[node name="Techo_c21" parent="Text_Mundo/Techo_C1" unique_id=318984243 instance=ExtResource("22_mwgmh")]
+position = Vector2(6720, -512)
+
+[node name="Techo_c22" parent="Text_Mundo/Techo_C1" unique_id=1394607690 instance=ExtResource("22_mwgmh")]
+position = Vector2(6400, 64)
+
+[node name="Techo_c23" parent="Text_Mundo/Techo_C1" unique_id=1277953802 instance=ExtResource("22_mwgmh")]
+position = Vector2(6720, -256)
+
+[node name="Techo_c24" parent="Text_Mundo/Techo_C1" unique_id=659152952 instance=ExtResource("22_mwgmh")]
+position = Vector2(7040, -512)
+
+[node name="Techo_c25" parent="Text_Mundo/Techo_C1" unique_id=1851057297 instance=ExtResource("22_mwgmh")]
+position = Vector2(6720, 64)
+
+[node name="Techo_c26" parent="Text_Mundo/Techo_C1" unique_id=388604712 instance=ExtResource("22_mwgmh")]
+position = Vector2(7040, -256)
+
+[node name="Techo_c27" parent="Text_Mundo/Techo_C1" unique_id=1117622654 instance=ExtResource("22_mwgmh")]
+position = Vector2(7040, 64)
 
 [node name="FollowingBack" type="Parallax2D" parent="." unique_id=609259551 node_paths=PackedStringArray("jugador")]
 z_index = -3
 z_as_relative = false
-scroll_offset = Vector2(0, -1024)
+scroll_offset = Vector2(-192, -1536)
 repeat_size = Vector2(3230, 0)
 repeat_times = 2
 script = ExtResource("19_kpmgh")
@@ -238,7 +266,17 @@ jugador = NodePath("../Jugador")
 
 [node name="TextureRect" type="TextureRect" parent="FollowingBack" unique_id=1140686590]
 modulate = Color(0.3, 0.3, 0.3, 1)
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 2816.0
+offset_top = 640.0
+offset_right = 2856.0
+offset_bottom = 680.0
 scale = Vector2(10, 10)
 texture = ExtResource("19_5bxjq")
+
+[node name="Pared invisible" type="StaticBody2D" parent="." unique_id=237953127]
+position = Vector2(320, 384)
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared invisible" unique_id=1809986727]
+shape = SubResource("RectangleShape2D_xulgr")

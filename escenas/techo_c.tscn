@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d0674a88rjl2i"]
+
+[ext_resource type="Texture2D" uid="uid://b0aijp7lquw7h" path="res://assets/techooo definitivo.png" id="1_6ikgn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kde1g"]
+size = Vector2(320, 448)
+
+[node name="Techo_c" type="StaticBody2D" unique_id=1871775075]
+collision_layer = 4
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=966830126]
+position = Vector2(32, 32)
+texture = ExtResource("1_6ikgn")
+region_enabled = true
+region_rect = Rect2(192, 64, 320, 448)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1854780792]
+position = Vector2(32, 32)
+shape = SubResource("RectangleShape2D_kde1g")
