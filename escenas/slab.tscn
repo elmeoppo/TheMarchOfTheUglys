@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bj2nysi15f3pl"]
+
+[ext_resource type="Texture2D" uid="uid://coulfyojhtrli" path="res://assets/fondo definitivooo-export.png" id="1_ec6g2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o23fb"]
+size = Vector2(192, 47)
+
+[node name="Slab" type="StaticBody2D" unique_id=795354016]
+collision_layer = 4
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=655700258]
+texture = ExtResource("1_ec6g2")
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1018522469]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_o23fb")

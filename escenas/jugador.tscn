@@ -18,25 +18,16 @@ collision_mask = 12
 script = ExtResource("1_jpodt")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1343267365]
-position = Vector2(0, -400)
-zoom = Vector2(0.5, 0.5)
+position = Vector2(0, -281)
+zoom = Vector2(0.8, 0.8)
 
 [node name="spawner_peces" type="Node2D" parent="Camera2D" unique_id=1529708719]
-position = Vector2(1152, 0)
+position = Vector2(720, 195)
 script = ExtResource("2_ovq70")
 escena_a_spawnear = ExtResource("3_as36m")
-tiempo_spawner = 5.0
+tiempo_spawner = 25.0
 
 [node name="Timer_pez" type="Timer" parent="Camera2D/spawner_peces" unique_id=775148108]
-
-[node name="ColorRect" type="ColorRect" parent="Camera2D" unique_id=799734518]
-z_index = -10
-z_as_relative = false
-offset_left = -1487.0
-offset_top = -973.0
-offset_right = 1498.0
-offset_bottom = 746.0
-color = Color(0, 0, 0.1254902, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=756730548]
 scale = Vector2(3, 3)
