@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ddaq005q0i0y6"]
+
+[ext_resource type="Script" uid="uid://j5jq3iqjed5v" path="res://Scrips/novia.gd" id="1_lba7m"]
+[ext_resource type="Texture2D" uid="uid://b1o5n2a1sq4gd" path="res://assets/ending/novia-export.png" id="1_rvr7w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lba7m"]
+size = Vector2(65, 60)
+
+[node name="Novia" type="Node2D" unique_id=1206883203]
+script = ExtResource("1_lba7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=791193772]
+texture = ExtResource("1_rvr7w")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1579907957]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2049194061]
+shape = SubResource("RectangleShape2D_lba7m")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
