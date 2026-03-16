@@ -2,8 +2,13 @@
 
 [ext_resource type="Script" uid="uid://d0xh5oubb62de" path="res://Scrips/menu_principal.gd" id="1_arcut"]
 [ext_resource type="Texture2D" uid="uid://c3ryytq3ox2cs" path="res://assets/Menu/LowRes.png" id="2_arcut"]
+[ext_resource type="Texture2D" uid="uid://crww0l2fiui31" path="res://assets/Menu/LowRes_n.png" id="3_olkao"]
 [ext_resource type="FontFile" uid="uid://qmxifrs3b331" path="res://Fonts/Daydream DEMO.otf" id="3_p8sbp"]
 [ext_resource type="Texture2D" uid="uid://bkxgt2rwlw60u" path="res://assets/Screenshot_178.png" id="4_olkao"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_bddn2"]
+diffuse_texture = ExtResource("2_arcut")
+normal_texture = ExtResource("3_olkao")
 
 [node name="Menu_Principal" type="Control" unique_id=1011783831]
 layout_mode = 3
@@ -17,7 +22,7 @@ script = ExtResource("1_arcut")
 [node name="TextureRect" type="Sprite2D" parent="." unique_id=1337185591]
 position = Vector2(577, 332)
 scale = Vector2(2, 2)
-texture = ExtResource("2_arcut")
+texture = SubResource("CanvasTexture_bddn2")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=774024577]
 custom_minimum_size = Vector2(300, 0)
@@ -72,8 +77,10 @@ horizontal_alignment = 1
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=519919048]
 position = Vector2(567, 276)
 color = Color(0, 0.48235294, 0.45882353, 1)
+energy = 2.0
 texture = ExtResource("4_olkao")
 texture_scale = 0.8
+height = 30.0
 
 [node name="Timer" type="Timer" parent="." unique_id=2060359626]
 wait_time = 0.1
