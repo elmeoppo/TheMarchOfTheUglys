@@ -1,5 +1,5 @@
 extends Node2D
-const ENDING = preload("uid://ehs7bapefjya")
+var ENDING = load("uid://ehs7bapefjya")
 
 
 
