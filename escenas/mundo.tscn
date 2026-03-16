@@ -125,10 +125,10 @@ position = Vector2(3200, 640)
 position = Vector2(0, 640)
 
 [node name="piso_A2" parent="Text_Mundo/piso_A1" unique_id=280206069 instance=ExtResource("17_l83ds")]
-position = Vector2(1408, 640)
+position = Vector2(7424, 640)
 
 [node name="piso_A3" parent="Text_Mundo/piso_A1" unique_id=1668016406 instance=ExtResource("17_l83ds")]
-position = Vector2(2112, 640)
+position = Vector2(1792, 640)
 
 [node name="piso_A4" parent="Text_Mundo/piso_A1" unique_id=933304980 instance=ExtResource("17_l83ds")]
 position = Vector2(2496, 640)
@@ -143,15 +143,21 @@ position = Vector2(4608, 896)
 position = Vector2(5312, 896)
 
 [node name="piso_A12" parent="Text_Mundo/piso_A1" unique_id=1797195859 instance=ExtResource("17_l83ds")]
-position = Vector2(6016, 896)
+position = Vector2(6720, 640)
 
 [node name="piso_A13" parent="Text_Mundo/piso_A1" unique_id=133014266 instance=ExtResource("17_l83ds")]
-position = Vector2(6720, 896)
+position = Vector2(6016, 640)
 
 [node name="piso_B1" type="Node" parent="Text_Mundo" unique_id=92624919]
 
 [node name="piso_B" parent="Text_Mundo/piso_B1" unique_id=77412424 instance=ExtResource("19_6r2j4")]
 position = Vector2(3200, 832)
+
+[node name="piso_B3" parent="Text_Mundo/piso_B1" unique_id=753455120 instance=ExtResource("19_6r2j4")]
+position = Vector2(6016, 832)
+
+[node name="piso_B4" parent="Text_Mundo/piso_B1" unique_id=920936428 instance=ExtResource("19_6r2j4")]
+position = Vector2(6720, 832)
 
 [node name="piso_B2" parent="Text_Mundo/piso_B1" unique_id=945628344 instance=ExtResource("19_6r2j4")]
 position = Vector2(2496, 832)
