@@ -184,7 +184,6 @@ scale = Vector2(0.8, 0.8)
 transform = Transform2D(0.8, 0, 0, 0.8, 0, 0)
 
 [node name="Barra" type="TextureProgressBar" parent="Capa" unique_id=1624514734]
-anchors_preset = -1
 offset_left = 472.5
 offset_top = 112.5
 offset_right = 1639.5
@@ -212,19 +211,6 @@ position = Vector2(127.800026, 118.00001)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_yio1t")
 autoplay = "default"
-
-[node name="Tiempo_n" type="Label" parent="Capa" unique_id=1371884676]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = 167.99988
-offset_top = 12.5
-offset_right = 277.99988
-offset_bottom = 82.5
-grow_horizontal = 0
-theme_override_fonts/font = ExtResource("5_qqfyd")
-theme_override_font_sizes/font_size = 34
-metadata/_edit_use_anchors_ = true
 
 [node name="contador_frutas" type="Label" parent="Capa" unique_id=1591584434]
 offset_left = 128.75

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d1x3oyiwjar4d" path="res://assets/peces/extra 3 rosa.png" id="5_1way2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyvrs"]
-size = Vector2(333.00006, 150.20003)
+size = Vector2(246.33337, 360.83337)
 
 [sub_resource type="Animation" id="Animation_0vjuy"]
 length = 0.001
@@ -153,8 +153,8 @@ velocidad_retroceso = 400.0
 
 [node name="pez1" type="Area2D" parent="." unique_id=571302801]
 scale = Vector2(0.8, 0.8)
-collision_layer = 5
-collision_mask = 5
+collision_layer = 4
+collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="pez1" unique_id=990832456]
 texture = ExtResource("1_787ym")
@@ -182,7 +182,7 @@ texture = ExtResource("5_1way2")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pez1" unique_id=20224067]
-position = Vector2(120.99999, -25.399998)
+position = Vector2(77.666664, -30.833332)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_fyvrs")
 

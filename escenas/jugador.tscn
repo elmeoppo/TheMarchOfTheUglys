@@ -8,7 +8,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_njcx7"]
 radius = 49.10603
-height = 181.08945
+height = 156.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njcx7"]
 size = Vector2(187, 113)
@@ -22,7 +22,7 @@ position = Vector2(0, -281)
 zoom = Vector2(0.8, 0.8)
 
 [node name="spawner_peces" type="Node2D" parent="Camera2D" unique_id=1529708719]
-position = Vector2(720, 195)
+position = Vector2(720, 248)
 script = ExtResource("2_ovq70")
 escena_a_spawnear = ExtResource("3_as36m")
 tiempo_spawner = 25.0
@@ -38,7 +38,7 @@ frame = 2
 frame_progress = 0.9075378
 
 [node name="hitbox_player" type="CollisionShape2D" parent="." unique_id=188312609]
-position = Vector2(-1.5, -7)
+position = Vector2(9, -8)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_njcx7")
 
