@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://camoad7x0wn7b"]
+
+[ext_resource type="Texture2D" uid="uid://bp6nnys252cng" path="res://assets/Carta.png" id="1_5wt4c"]
+[ext_resource type="Script" uid="uid://dbocq2irdgku5" path="res://Scrips/carta.gd" id="1_phnwx"]
+[ext_resource type="Texture2D" uid="uid://cnfqy51swoqya" path="res://assets/fondo_marino.png" id="2_vog2r"]
+
+[node name="Carta" type="Control" unique_id=735206474]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_phnwx")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1770354013]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5wt4c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=751812905]
+z_index = -1
+z_as_relative = false
+repeat_size = Vector2(1292, 0)
+autoscroll = Vector2(100, 0)
+repeat_times = 2
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D" unique_id=91134454]
+modulate = Color(0.3, 0.3, 0.3, 1)
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_vog2r")

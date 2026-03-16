@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bo6h12jdfe2og"]
 
-[ext_resource type="Texture2D" uid="uid://bj32y2o07t3c2" path="res://assets/icon.svg" id="1_37xja"]
+[ext_resource type="Script" uid="uid://d0xh5oubb62de" path="res://Scrips/menu_principal.gd" id="1_arcut"]
+[ext_resource type="Texture2D" uid="uid://c3ryytq3ox2cs" path="res://assets/Menu/LowRes.png" id="2_arcut"]
+[ext_resource type="FontFile" uid="uid://qmxifrs3b331" path="res://Fonts/Daydream DEMO.otf" id="3_p8sbp"]
+[ext_resource type="Texture2D" uid="uid://bkxgt2rwlw60u" path="res://assets/Screenshot_178.png" id="4_olkao"]
 
 [node name="Menu_Principal" type="Control" unique_id=1011783831]
 layout_mode = 3
@@ -9,11 +12,71 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_arcut")
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1248881116]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 320.0
-offset_right = 640.0
-offset_bottom = 448.0
-texture_normal = ExtResource("1_37xja")
+[node name="TextureRect" type="Sprite2D" parent="." unique_id=1337185591]
+position = Vector2(577, 332)
+scale = Vector2(2, 2)
+texture = ExtResource("2_arcut")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=774024577]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -43.0
+offset_right = 150.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_p8sbp")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1]
+Press the ENTER key
+to start![/wave]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1945627140]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -143.0
+offset_right = 166.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.45490196, 0.83137256, 0.8862745, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_p8sbp")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=10.0 connected=1]The march
+of the ugly[/wave]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=519919048]
+position = Vector2(567, 276)
+color = Color(0, 0.48235294, 0.45882353, 1)
+texture = ExtResource("4_olkao")
+texture_scale = 0.8
+
+[node name="Timer" type="Timer" parent="." unique_id=2060359626]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -17,9 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://cnfqy51swoqya" path="res://assets/fondo_marino.png" id="19_5bxjq"]
 [ext_resource type="PackedScene" uid="uid://cfe78r34qugud" path="res://escenas/piso_B.tscn" id="19_6r2j4"]
 [ext_resource type="Script" uid="uid://daxytv7le2jwb" path="res://Scrips/Fondo_movible.gd" id="19_kpmgh"]
-[ext_resource type="PackedScene" uid="uid://c2uc4alkukcw8" path="res://escenas/techo_a.tscn" id="20_rn4qs"]
-[ext_resource type="PackedScene" uid="uid://dl11r000nmimi" path="res://escenas/techo_b.tscn" id="21_x5o5w"]
-[ext_resource type="PackedScene" uid="uid://d0674a88rjl2i" path="res://escenas/techo_c.tscn" id="22_mwgmh"]
+[ext_resource type="PackedScene" path="res://escenas/techo_a.tscn" id="20_rn4qs"]
+[ext_resource type="PackedScene" path="res://escenas/techo_b.tscn" id="21_x5o5w"]
+[ext_resource type="PackedScene" path="res://escenas/techo_c.tscn" id="22_mwgmh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htfqa"]
 size = Vector2(22, 114)
@@ -264,18 +264,21 @@ position = Vector2(7040, 64)
 [node name="FollowingBack" type="Parallax2D" parent="." unique_id=609259551 node_paths=PackedStringArray("jugador")]
 z_index = -3
 z_as_relative = false
-scroll_offset = Vector2(-192, -1536)
-repeat_size = Vector2(3230, 0)
+repeat_size = Vector2(3200, 0)
 repeat_times = 2
 script = ExtResource("19_kpmgh")
 jugador = NodePath("../Jugador")
 
 [node name="TextureRect" type="TextureRect" parent="FollowingBack" unique_id=1140686590]
 modulate = Color(0.3, 0.3, 0.3, 1)
-offset_left = 2816.0
-offset_top = 640.0
-offset_right = 2856.0
-offset_bottom = 680.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -600.0
+offset_right = 323.0
+offset_bottom = -408.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(10, 10)
 texture = ExtResource("19_5bxjq")
 
