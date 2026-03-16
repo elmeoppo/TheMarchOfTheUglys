@@ -17,9 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://cnfqy51swoqya" path="res://assets/fondo_marino.png" id="19_5bxjq"]
 [ext_resource type="PackedScene" uid="uid://cfe78r34qugud" path="res://escenas/piso_B.tscn" id="19_6r2j4"]
 [ext_resource type="Script" uid="uid://daxytv7le2jwb" path="res://Scrips/Fondo_movible.gd" id="19_kpmgh"]
-[ext_resource type="PackedScene" path="res://escenas/techo_a.tscn" id="20_rn4qs"]
-[ext_resource type="PackedScene" path="res://escenas/techo_b.tscn" id="21_x5o5w"]
-[ext_resource type="PackedScene" path="res://escenas/techo_c.tscn" id="22_mwgmh"]
+[ext_resource type="PackedScene" uid="uid://c2uc4alkukcw8" path="res://escenas/techo_a.tscn" id="20_rn4qs"]
+[ext_resource type="PackedScene" uid="uid://dl11r000nmimi" path="res://escenas/techo_b.tscn" id="21_x5o5w"]
+[ext_resource type="PackedScene" uid="uid://d0674a88rjl2i" path="res://escenas/techo_c.tscn" id="22_mwgmh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htfqa"]
 size = Vector2(22, 114)
@@ -47,7 +47,7 @@ offset_bottom = 512.0
 player = NodePath("../Jugador")
 
 [node name="Jugador" parent="." unique_id=2018510561 instance=ExtResource("4_6r2j4")]
-position = Vector2(573, 508)
+position = Vector2(563, 575)
 
 [node name="Frutas" parent="." unique_id=1719017421 node_paths=PackedStringArray("player") instance=ExtResource("9_mwgmh")]
 player = NodePath("../Jugador")
@@ -63,10 +63,16 @@ position = Vector2(3968, 832)
 position = Vector2(390, 398)
 
 [node name="cereza" parent="Frutas" unique_id=1777420676 instance=ExtResource("13_sh8ar")]
-position = Vector2(3072, 512)
+position = Vector2(2400, 568)
+
+[node name="piso_B4" parent="." unique_id=843933475 instance=ExtResource("19_6r2j4")]
+position = Vector2(3456, -276)
+
+[node name="piso_B5" parent="." unique_id=1262672115 instance=ExtResource("19_6r2j4")]
+position = Vector2(3760, -280)
 
 [node name="erizo_de_mar" parent="." unique_id=1668810766 instance=ExtResource("15_maaya")]
-position = Vector2(896, 576)
+position = Vector2(902, 620)
 
 [node name="medusa2" parent="." unique_id=605960123 instance=ExtResource("15_xulgr")]
 position = Vector2(4736, 768)
@@ -76,7 +82,7 @@ position = Vector2(4160, 768)
 scale = Vector2(4, 4)
 
 [node name="Cadena" type="StaticBody2D" parent="gatito_medusa" unique_id=1332707245]
-position = Vector2(-1.5999908, 31.8)
+position = Vector2(-97.09999, 29.999996)
 scale = Vector2(0.19999999, 0.19999999)
 collision_layer = 0
 collision_mask = 0
@@ -112,154 +118,124 @@ shape = SubResource("RectangleShape2D_htfqa")
 
 [node name="piso_A1" type="Node" parent="Text_Mundo" unique_id=739604136]
 
-[node name="piso_A" parent="Text_Mundo/piso_A1" unique_id=843933475 instance=ExtResource("17_l83ds")]
+[node name="piso_A" parent="Text_Mundo/piso_A1" unique_id=984469791 instance=ExtResource("17_l83ds")]
 position = Vector2(704, 640)
 
 [node name="piso_A8" parent="Text_Mundo/piso_A1" unique_id=1846424968 instance=ExtResource("17_l83ds")]
-position = Vector2(-704, 640)
+position = Vector2(-705, 641)
 
 [node name="piso_A7" parent="Text_Mundo/piso_A1" unique_id=860696873 instance=ExtResource("17_l83ds")]
-position = Vector2(3200, 640)
+position = Vector2(2811, 642)
 
 [node name="piso_A5" parent="Text_Mundo/piso_A1" unique_id=26731638 instance=ExtResource("17_l83ds")]
 position = Vector2(0, 640)
 
 [node name="piso_A2" parent="Text_Mundo/piso_A1" unique_id=280206069 instance=ExtResource("17_l83ds")]
-position = Vector2(7424, 640)
+position = Vector2(7047, 632)
 
 [node name="piso_A3" parent="Text_Mundo/piso_A1" unique_id=1668016406 instance=ExtResource("17_l83ds")]
-position = Vector2(1792, 640)
+position = Vector2(1408, 640)
 
 [node name="piso_A4" parent="Text_Mundo/piso_A1" unique_id=933304980 instance=ExtResource("17_l83ds")]
-position = Vector2(2496, 640)
+position = Vector2(2107, 640)
 
 [node name="piso_A9" parent="Text_Mundo/piso_A1" unique_id=1534108395 instance=ExtResource("17_l83ds")]
-position = Vector2(3904, 896)
+position = Vector2(3522, 888.8)
 
 [node name="piso_A10" parent="Text_Mundo/piso_A1" unique_id=2073937572 instance=ExtResource("17_l83ds")]
-position = Vector2(4608, 896)
+position = Vector2(4226, 888.8)
 
 [node name="piso_A11" parent="Text_Mundo/piso_A1" unique_id=26020138 instance=ExtResource("17_l83ds")]
-position = Vector2(5312, 896)
+position = Vector2(4930, 888.8)
 
 [node name="piso_A12" parent="Text_Mundo/piso_A1" unique_id=1797195859 instance=ExtResource("17_l83ds")]
-position = Vector2(6720, 640)
+position = Vector2(6343, 632)
 
 [node name="piso_A13" parent="Text_Mundo/piso_A1" unique_id=133014266 instance=ExtResource("17_l83ds")]
-position = Vector2(6016, 640)
+position = Vector2(5639, 632)
 
 [node name="piso_B1" type="Node" parent="Text_Mundo" unique_id=92624919]
 
 [node name="piso_B" parent="Text_Mundo/piso_B1" unique_id=77412424 instance=ExtResource("19_6r2j4")]
-position = Vector2(3200, 832)
+position = Vector2(2815, 823)
 
 [node name="piso_B3" parent="Text_Mundo/piso_B1" unique_id=753455120 instance=ExtResource("19_6r2j4")]
-position = Vector2(6016, 832)
+position = Vector2(5639, 824)
 
 [node name="piso_B4" parent="Text_Mundo/piso_B1" unique_id=920936428 instance=ExtResource("19_6r2j4")]
-position = Vector2(6720, 832)
+position = Vector2(6343, 824)
 
 [node name="piso_B2" parent="Text_Mundo/piso_B1" unique_id=945628344 instance=ExtResource("19_6r2j4")]
-position = Vector2(2496, 832)
+position = Vector2(2112, 822)
 
 [node name="Techo_A1" type="Node" parent="Text_Mundo" unique_id=1567112060]
 
-[node name="Techo_A3" parent="Text_Mundo/Techo_A1" unique_id=918223028 instance=ExtResource("20_rn4qs")]
-position = Vector2(4224, -512)
-
 [node name="Techo_A2" parent="Text_Mundo/Techo_A1" unique_id=378019020 instance=ExtResource("20_rn4qs")]
-position = Vector2(4224, -192)
+position = Vector2(3516, -32)
 
 [node name="Techo_A" parent="Text_Mundo/Techo_A1" unique_id=583133022 instance=ExtResource("20_rn4qs")]
-position = Vector2(4224, 64)
+position = Vector2(3516, 224)
 
 [node name="Techo_B1" type="Node" parent="Text_Mundo" unique_id=496803783]
 
 [node name="Techo_B" parent="Text_Mundo/Techo_B1" unique_id=1044569672 instance=ExtResource("21_x5o5w")]
-position = Vector2(7232, -64)
+position = Vector2(6888, 219)
 
 [node name="Techo_C1" type="Node" parent="Text_Mundo" unique_id=1078204603]
 
-[node name="Techo_c7" parent="Text_Mundo/Techo_C1" unique_id=1871775075 instance=ExtResource("22_mwgmh")]
-position = Vector2(4480, -512)
-
 [node name="Techo_c6" parent="Text_Mundo/Techo_C1" unique_id=1246304783 instance=ExtResource("22_mwgmh")]
-position = Vector2(4480, -256)
-
-[node name="Techo_c9" parent="Text_Mundo/Techo_C1" unique_id=756684049 instance=ExtResource("22_mwgmh")]
-position = Vector2(4800, -512)
+position = Vector2(4068, -41)
 
 [node name="Techo_c" parent="Text_Mundo/Techo_C1" unique_id=497098761 instance=ExtResource("22_mwgmh")]
-position = Vector2(4480, 64)
+position = Vector2(4073, 218)
 
 [node name="Techo_c4" parent="Text_Mundo/Techo_C1" unique_id=1979142540 instance=ExtResource("22_mwgmh")]
-position = Vector2(4800, -256)
-
-[node name="Techo_c8" parent="Text_Mundo/Techo_C1" unique_id=816348892 instance=ExtResource("22_mwgmh")]
-position = Vector2(5120, -512)
+position = Vector2(4393, -102)
 
 [node name="Techo_c2" parent="Text_Mundo/Techo_C1" unique_id=1181408340 instance=ExtResource("22_mwgmh")]
-position = Vector2(4800, 64)
+position = Vector2(4393, 218)
 
 [node name="Techo_c5" parent="Text_Mundo/Techo_C1" unique_id=1579004073 instance=ExtResource("22_mwgmh")]
-position = Vector2(5120, -256)
+position = Vector2(4713, -102)
 
 [node name="Techo_c3" parent="Text_Mundo/Techo_C1" unique_id=1336935177 instance=ExtResource("22_mwgmh")]
-position = Vector2(5120, 64)
-
-[node name="Techo_c10" parent="Text_Mundo/Techo_C1" unique_id=654418555 instance=ExtResource("22_mwgmh")]
-position = Vector2(5440, -512)
+position = Vector2(4713, 218)
 
 [node name="Techo_c11" parent="Text_Mundo/Techo_C1" unique_id=485817471 instance=ExtResource("22_mwgmh")]
-position = Vector2(5440, -256)
-
-[node name="Techo_c12" parent="Text_Mundo/Techo_C1" unique_id=1424661574 instance=ExtResource("22_mwgmh")]
-position = Vector2(5760, -512)
+position = Vector2(5033, -102)
 
 [node name="Techo_c13" parent="Text_Mundo/Techo_C1" unique_id=1493372933 instance=ExtResource("22_mwgmh")]
-position = Vector2(5440, 64)
+position = Vector2(5033, 218)
 
 [node name="Techo_c14" parent="Text_Mundo/Techo_C1" unique_id=912478954 instance=ExtResource("22_mwgmh")]
-position = Vector2(5760, -256)
-
-[node name="Techo_c15" parent="Text_Mundo/Techo_C1" unique_id=23967849 instance=ExtResource("22_mwgmh")]
-position = Vector2(6080, -512)
+position = Vector2(5353, -102)
 
 [node name="Techo_c16" parent="Text_Mundo/Techo_C1" unique_id=1195721693 instance=ExtResource("22_mwgmh")]
-position = Vector2(5760, 64)
+position = Vector2(5353, 218)
 
 [node name="Techo_c17" parent="Text_Mundo/Techo_C1" unique_id=1551589143 instance=ExtResource("22_mwgmh")]
-position = Vector2(6080, -256)
+position = Vector2(5673, -102)
 
 [node name="Techo_c18" parent="Text_Mundo/Techo_C1" unique_id=2012044195 instance=ExtResource("22_mwgmh")]
-position = Vector2(6080, 64)
-
-[node name="Techo_c19" parent="Text_Mundo/Techo_C1" unique_id=1389572437 instance=ExtResource("22_mwgmh")]
-position = Vector2(6400, -512)
+position = Vector2(5673, 218)
 
 [node name="Techo_c20" parent="Text_Mundo/Techo_C1" unique_id=403537113 instance=ExtResource("22_mwgmh")]
-position = Vector2(6400, -256)
-
-[node name="Techo_c21" parent="Text_Mundo/Techo_C1" unique_id=318984243 instance=ExtResource("22_mwgmh")]
-position = Vector2(6720, -512)
+position = Vector2(5993, -102)
 
 [node name="Techo_c22" parent="Text_Mundo/Techo_C1" unique_id=1394607690 instance=ExtResource("22_mwgmh")]
-position = Vector2(6400, 64)
+position = Vector2(5993, 218)
 
 [node name="Techo_c23" parent="Text_Mundo/Techo_C1" unique_id=1277953802 instance=ExtResource("22_mwgmh")]
-position = Vector2(6720, -256)
-
-[node name="Techo_c24" parent="Text_Mundo/Techo_C1" unique_id=659152952 instance=ExtResource("22_mwgmh")]
-position = Vector2(7040, -512)
+position = Vector2(6313, -102)
 
 [node name="Techo_c25" parent="Text_Mundo/Techo_C1" unique_id=1851057297 instance=ExtResource("22_mwgmh")]
-position = Vector2(6720, 64)
+position = Vector2(6313, 218)
 
 [node name="Techo_c26" parent="Text_Mundo/Techo_C1" unique_id=388604712 instance=ExtResource("22_mwgmh")]
-position = Vector2(7040, -256)
+position = Vector2(6636, -72)
 
 [node name="Techo_c27" parent="Text_Mundo/Techo_C1" unique_id=1117622654 instance=ExtResource("22_mwgmh")]
-position = Vector2(7040, 64)
+position = Vector2(6633, 218)
 
 [node name="FollowingBack" type="Parallax2D" parent="." unique_id=609259551 node_paths=PackedStringArray("jugador")]
 z_index = -3
@@ -281,6 +257,13 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(10, 10)
 texture = ExtResource("19_5bxjq")
+metadata/_edit_lock_ = true
+
+[node name="piso_B2" parent="FollowingBack/TextureRect" unique_id=680053790 instance=ExtResource("19_6r2j4")]
+position = Vector2(2463, -31)
+
+[node name="piso_B3" parent="FollowingBack/TextureRect" unique_id=98800805 instance=ExtResource("19_6r2j4")]
+position = Vector2(2463, -31)
 
 [node name="Pared invisible" type="StaticBody2D" parent="." unique_id=237953127]
 position = Vector2(320, 384)
@@ -289,3 +272,87 @@ collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pared invisible" unique_id=1809986727]
 shape = SubResource("RectangleShape2D_xulgr")
+
+[node name="piso_B7" parent="Pared invisible" unique_id=162981511 instance=ExtResource("19_6r2j4")]
+position = Vector2(5803, -668)
+
+[node name="piso_B7" parent="Pared invisible/piso_B7" unique_id=1483341838 instance=ExtResource("19_6r2j4")]
+position = Vector2(160, -2)
+
+[node name="piso_B11" parent="." unique_id=360960379 instance=ExtResource("19_6r2j4")]
+position = Vector2(7636, -113)
+
+[node name="piso_B8" parent="." unique_id=2053949769 instance=ExtResource("19_6r2j4")]
+position = Vector2(8259, -112)
+
+[node name="piso_A12" parent="." unique_id=508856097 instance=ExtResource("17_l83ds")]
+position = Vector2(2186, 42)
+
+[node name="piso_A10" parent="." unique_id=272250695 instance=ExtResource("17_l83ds")]
+position = Vector2(1589, 42)
+
+[node name="Techo_c22" parent="." unique_id=49260568 instance=ExtResource("22_mwgmh")]
+position = Vector2(1900, 289)
+
+[node name="Techo_c23" parent="." unique_id=1301866331 instance=ExtResource("22_mwgmh")]
+position = Vector2(5993, 218)
+
+[node name="Techo_c24" parent="." unique_id=570722451 instance=ExtResource("22_mwgmh")]
+position = Vector2(2222, 291)
+
+[node name="Techo_c25" parent="." unique_id=1871775075 instance=ExtResource("22_mwgmh")]
+position = Vector2(2539, 287)
+
+[node name="Techo_A" parent="." unique_id=918223028 instance=ExtResource("20_rn4qs")]
+position = Vector2(1643, 289)
+
+[node name="Techo_B" parent="." unique_id=1898803565 instance=ExtResource("21_x5o5w")]
+position = Vector2(2794, 286)
+
+[node name="Techo_c26" parent="." unique_id=935265838 instance=ExtResource("22_mwgmh")]
+position = Vector2(6795, -72)
+
+[node name="piso_A2" parent="." unique_id=1583668659 instance=ExtResource("17_l83ds")]
+position = Vector2(7745, 632)
+
+[node name="piso_A3" parent="." unique_id=624662723 instance=ExtResource("17_l83ds")]
+position = Vector2(8450, 632)
+
+[node name="Techo_c27" parent="." unique_id=1559122628 instance=ExtResource("22_mwgmh")]
+position = Vector2(7952, 115)
+
+[node name="Techo_c28" parent="." unique_id=1128042183 instance=ExtResource("22_mwgmh")]
+position = Vector2(8274, 117)
+
+[node name="Techo_c29" parent="." unique_id=848234501 instance=ExtResource("22_mwgmh")]
+position = Vector2(8591, 113)
+
+[node name="Techo_A2" parent="." unique_id=1503185854 instance=ExtResource("20_rn4qs")]
+position = Vector2(7695, 115)
+
+[node name="Techo_B2" parent="." unique_id=111892431 instance=ExtResource("21_x5o5w")]
+position = Vector2(8846, 112)
+
+[node name="piso_B6" parent="." unique_id=1491303389 instance=ExtResource("19_6r2j4")]
+position = Vector2(4950, -328)
+
+[node name="piso_A11" parent="." unique_id=2146807726 instance=ExtResource("17_l83ds")]
+position = Vector2(5805, -348)
+
+[node name="piso_A9" parent="." unique_id=282857530 instance=ExtResource("17_l83ds")]
+position = Vector2(4268, -347)
+
+[node name="piso_B10" parent="." unique_id=181102037 instance=ExtResource("19_6r2j4")]
+position = Vector2(5102, -328)
+
+[node name="piso_A4" parent="." unique_id=551061458 instance=ExtResource("17_l83ds")]
+position = Vector2(9153, 632)
+
+[node name="piso_A5" parent="." unique_id=365653169 instance=ExtResource("17_l83ds")]
+position = Vector2(9858, 632)
+
+[node name="Techo_c30" parent="." unique_id=1329829884 instance=ExtResource("22_mwgmh")]
+position = Vector2(3773, -70)
+
+[node name="Techo_c31" parent="." unique_id=276411533 instance=ExtResource("22_mwgmh")]
+position = Vector2(3770, 220)
