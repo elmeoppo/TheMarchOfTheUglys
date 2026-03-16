@@ -4,12 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://b1o5n2a1sq4gd" path="res://assets/ending/novia-export.png" id="1_rvr7w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lba7m"]
-size = Vector2(65, 60)
+size = Vector2(190, 180)
 
 [node name="Novia" type="Node2D" unique_id=1206883203]
 script = ExtResource("1_lba7m")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=791193772]
+scale = Vector2(3, 3)
 texture = ExtResource("1_rvr7w")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1579907957]
