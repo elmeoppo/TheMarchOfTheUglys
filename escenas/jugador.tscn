@@ -18,6 +18,7 @@ collision_mask = 12
 script = ExtResource("1_jpodt")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1343267365]
+position = Vector2(0, -400)
 zoom = Vector2(0.5, 0.5)
 
 [node name="spawner_peces" type="Node2D" parent="Camera2D" unique_id=1529708719]
