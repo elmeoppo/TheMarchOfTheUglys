@@ -111,18 +111,25 @@ script = ExtResource("1_xulgr")
 player = NodePath("Jugador")
 
 [node name="Barra_Stamina" parent="." unique_id=667103573 node_paths=PackedStringArray("player", "cantidad_manzanas") instance=ExtResource("2_5bxjq")]
+offset_left = 576.0
+offset_top = 512.0
+offset_right = 576.0
+offset_bottom = 512.0
 player = NodePath("../Jugador")
 cantidad_manzanas = NodePath("../Frutas")
-metadata/_edit_use_anchors_ = true
 
 [node name="barra_vida" parent="." unique_id=1598866872 node_paths=PackedStringArray("player") instance=ExtResource("3_kpmgh")]
+offset_left = 576.0
+offset_top = 512.0
+offset_right = 576.0
+offset_bottom = 512.0
 player = NodePath("../Jugador")
 
 [node name="Jugador" parent="." unique_id=2018510561 instance=ExtResource("4_6r2j4")]
-position = Vector2(-3, -4)
+position = Vector2(573, 508)
 
 [node name="medusa" type="RigidBody2D" parent="." unique_id=107545423]
-position = Vector2(896, -128)
+position = Vector2(1472, 384)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("5_xq8jy")
@@ -140,7 +147,7 @@ position = Vector2(-0.5, 3)
 shape = SubResource("RectangleShape2D_2jggn")
 
 [node name="Caja_Movible" type="RigidBody2D" parent="." unique_id=1990650094]
-position = Vector2(320, -320)
+position = Vector2(896, 192)
 collision_layer = 4
 collision_mask = 7
 freeze_mode = 1
@@ -157,26 +164,26 @@ shape = SubResource("RectangleShape2D_cey3t")
 player = NodePath("../Jugador")
 
 [node name="Manzana" parent="Frutas" unique_id=1985196393 instance=ExtResource("10_m8y22")]
-position = Vector2(-281, 8)
+position = Vector2(295, 520)
 scale = Vector2(2, 2)
 
 [node name="Fresa" parent="Frutas" unique_id=736862643 instance=ExtResource("11_6vh84")]
-position = Vector2(-177, 52)
+position = Vector2(399, 564)
 
 [node name="Sandia" parent="Frutas" unique_id=1219563134 instance=ExtResource("12_gs36m")]
-position = Vector2(-186, -114)
+position = Vector2(390, 398)
 
 [node name="cereza" parent="Frutas" unique_id=1777420676 instance=ExtResource("13_sh8ar")]
-position = Vector2(-637, -10)
+position = Vector2(-61, 502)
 
 [node name="erizo_de_mar" parent="." unique_id=1668810766 instance=ExtResource("15_maaya")]
-position = Vector2(229, 82)
+position = Vector2(805, 594)
 
 [node name="medusa2" parent="." unique_id=605960123 instance=ExtResource("15_xulgr")]
-position = Vector2(768, 64)
+position = Vector2(1344, 576)
 
 [node name="gatito_medusa" parent="." unique_id=98317404 instance=ExtResource("14_q3w73")]
-position = Vector2(-1152, 64)
+position = Vector2(-576, 575.99994)
 scale = Vector2(2.5, 2.5)
 
 [node name="Cadena" type="StaticBody2D" parent="gatito_medusa" unique_id=1332707245]
@@ -198,22 +205,22 @@ shape = SubResource("RectangleShape2D_htfqa")
 [node name="piso" type="Node" parent="piso_mundo" unique_id=739604136]
 
 [node name="piso_A" parent="piso_mundo/piso" unique_id=843933475 instance=ExtResource("17_l83ds")]
-position = Vector2(-192, 128)
+position = Vector2(384, 640)
 
 [node name="piso_A7" parent="piso_mundo/piso" unique_id=860696873 instance=ExtResource("17_l83ds")]
-position = Vector2(-2304, 128)
+position = Vector2(-1728, 640)
 
 [node name="piso_A5" parent="piso_mundo/piso" unique_id=26731638 instance=ExtResource("17_l83ds")]
-position = Vector2(-896, 128)
+position = Vector2(-320, 640)
 
 [node name="piso_A6" parent="piso_mundo/piso" unique_id=1285039513 instance=ExtResource("17_l83ds")]
-position = Vector2(-1600, 128)
+position = Vector2(-1024, 640)
 
 [node name="piso_A2" parent="piso_mundo/piso" unique_id=280206069 instance=ExtResource("17_l83ds")]
-position = Vector2(512, 128)
+position = Vector2(1088, 640)
 
 [node name="piso_A3" parent="piso_mundo/piso" unique_id=1668016406 instance=ExtResource("17_l83ds")]
-position = Vector2(1216, 128)
+position = Vector2(1792, 640)
 
 [node name="piso_A4" parent="piso_mundo/piso" unique_id=933304980 instance=ExtResource("17_l83ds")]
-position = Vector2(1920, 128)
+position = Vector2(2496, 640)
