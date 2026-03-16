@@ -29,6 +29,15 @@ tiempo_spawner = 5.0
 
 [node name="Timer_pez" type="Timer" parent="Camera2D/spawner_peces" unique_id=775148108]
 
+[node name="ColorRect" type="ColorRect" parent="Camera2D" unique_id=799734518]
+z_index = -10
+z_as_relative = false
+offset_left = -1487.0
+offset_top = -973.0
+offset_right = 1498.0
+offset_bottom = 746.0
+color = Color(0, 0, 0.1254902, 1)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=756730548]
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_njcx7")
