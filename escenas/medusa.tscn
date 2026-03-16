@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://wwwvkxlr74bj"]
+
+[ext_resource type="Script" uid="uid://0352eme0rfe8" path="res://Scrips/erizo_de_mar.gd" id="1_kpisc"]
+[ext_resource type="Texture2D" uid="uid://cjswgrurmgokr" path="res://assets/medusa.png" id="2_kpisc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_goktr"]
+size = Vector2(49, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqj7o"]
+atlas = ExtResource("2_kpisc")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8irx"]
+atlas = ExtResource("2_kpisc")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7ngv"]
+atlas = ExtResource("2_kpisc")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtfgg"]
+atlas = ExtResource("2_kpisc")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jsay"]
+atlas = ExtResource("2_kpisc")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wx1d6"]
+atlas = ExtResource("2_kpisc")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36xlc"]
+atlas = ExtResource("2_kpisc")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw405"]
+atlas = ExtResource("2_kpisc")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5iyw3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqj7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8irx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7ngv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtfgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jsay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wx1d6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36xlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tw405")
+}],
+"loop": true,
+"name": &"gatito_medusa",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_641xs"]
+size = Vector2(62, 52)
+
+[node name="medusa" type="StaticBody2D" unique_id=1668810766]
+scale = Vector2(3, 3)
+collision_layer = 10
+collision_mask = 4
+script = ExtResource("1_kpisc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1947520489]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_goktr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=862717960]
+sprite_frames = SubResource("SpriteFrames_5iyw3")
+animation = &"gatito_medusa"
+autoplay = "gatito_medusa"
+frame = 1
+frame_progress = 0.85906726
+
+[node name="Area2D" type="Area2D" parent="." unique_id=393983868]
+
+[node name="Area2D" type="CollisionShape2D" parent="Area2D" unique_id=144111436]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_641xs")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

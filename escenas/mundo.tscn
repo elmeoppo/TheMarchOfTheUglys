@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://4bl4kyp0t3w7" path="res://escenas/cereza.tscn" id="13_sh8ar"]
 [ext_resource type="PackedScene" uid="uid://cil0x3u4hswm0" path="res://escenas/mina.tscn" id="14_q3w73"]
 [ext_resource type="PackedScene" uid="uid://34ivnbetxflf" path="res://escenas/erizo_de_mar.tscn" id="15_maaya"]
+[ext_resource type="PackedScene" uid="uid://wwwvkxlr74bj" path="res://escenas/medusa.tscn" id="15_xulgr"]
 [ext_resource type="Texture2D" uid="uid://cdl22sbtu07dr" path="res://assets/cadenas.png" id="16_gyqeu"]
 [ext_resource type="PackedScene" uid="uid://ca60rw1hxy4qs" path="res://escenas/piso_A.tscn" id="17_l83ds"]
 
@@ -171,8 +172,11 @@ position = Vector2(-637, -10)
 [node name="erizo_de_mar" parent="." unique_id=1668810766 instance=ExtResource("15_maaya")]
 position = Vector2(229, 82)
 
+[node name="medusa2" parent="." unique_id=605960123 instance=ExtResource("15_xulgr")]
+position = Vector2(768, 64)
+
 [node name="gatito_medusa" parent="." unique_id=98317404 instance=ExtResource("14_q3w73")]
-position = Vector2(-1152, 63.999985)
+position = Vector2(-1152, 64)
 scale = Vector2(2.5, 2.5)
 
 [node name="Cadena" type="StaticBody2D" parent="gatito_medusa" unique_id=1332707245]
