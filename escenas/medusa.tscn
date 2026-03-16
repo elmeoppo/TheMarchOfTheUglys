@@ -88,7 +88,7 @@ position = Vector2(-0.33333334, -0.6666667)
 rotation = -0.7644222
 rotates = false
 script = ExtResource("1_jqj7o")
-velocidad_medusa = 60.0
+velocidad_medusa = 80.0
 
 [node name="medusa" type="StaticBody2D" parent="PathFollow2D" unique_id=1668810766]
 position = Vector2(-0.19377281, 0.7197275)
