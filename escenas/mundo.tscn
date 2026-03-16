@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://wwwvkxlr74bj" path="res://escenas/medusa.tscn" id="15_xulgr"]
 [ext_resource type="Texture2D" uid="uid://cdl22sbtu07dr" path="res://assets/cadenas.png" id="16_gyqeu"]
 [ext_resource type="PackedScene" uid="uid://ca60rw1hxy4qs" path="res://escenas/piso_A.tscn" id="17_l83ds"]
+[ext_resource type="Texture2D" uid="uid://cnfqy51swoqya" path="res://assets/fondo_marino.png" id="19_5bxjq"]
+[ext_resource type="Script" uid="uid://daxytv7le2jwb" path="res://Scrips/Fondo_movible.gd" id="19_kpmgh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cey3t"]
 atlas = ExtResource("6_6juyn")
@@ -224,3 +226,19 @@ position = Vector2(1792, 640)
 
 [node name="piso_A4" parent="piso_mundo/piso" unique_id=933304980 instance=ExtResource("17_l83ds")]
 position = Vector2(2496, 640)
+
+[node name="FollowingBack" type="Parallax2D" parent="." unique_id=609259551 node_paths=PackedStringArray("jugador")]
+z_index = -3
+z_as_relative = false
+scroll_offset = Vector2(0, -1024)
+repeat_size = Vector2(3230, 0)
+repeat_times = 2
+script = ExtResource("19_kpmgh")
+jugador = NodePath("../Jugador")
+
+[node name="TextureRect" type="TextureRect" parent="FollowingBack" unique_id=1140686590]
+modulate = Color(0.3, 0.3, 0.3, 1)
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(10, 10)
+texture = ExtResource("19_5bxjq")
