@@ -50,7 +50,8 @@ func recibir_daño(value):
 		if not herido:
 			herido = true
 			animated_sprite_2d.play("lloron")
-			await get_tree().create_timer(3.0).timeout
+			if get_tree():
+				await get_tree().create_timer(3.0).timeout
 			herido = false
 			if direction != 0.0:
 				_on_moving(direction)
@@ -144,7 +145,7 @@ func _on_tocar_piso():
 	print("TOCANDO PISO")
 	if not herido:
 		animated_sprite_2d.play("idle")
-	timer.start(3.0)
+	timer.start(1.5)
 
 func _termino_recuperacion_tiempo():
 	if saltos_dados != 0.0:

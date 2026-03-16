@@ -12,6 +12,7 @@ size = Vector2(333.00006, 150.20003)
 
 [sub_resource type="Animation" id="Animation_0vjuy"]
 length = 0.001
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -47,6 +48,30 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(41.799995, -34.399998)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("pez1/Sprite2D4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-14.600006, -62.999992)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("pez1/Sprite2D5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(31, -86.59999)]
 }
 
 [sub_resource type="Animation" id="Animation_vyk7u"]
@@ -84,10 +109,34 @@ tracks/2/path = NodePath("pez1/Sprite2D3:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(41.799995, -34.399998)]
+"values": [Vector2(41.799995, -34.399998), Vector2(27.25, -50), Vector2(11.75, -26.5), Vector2(-16.75, -13.75), Vector2(32, 6)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("pez1/Sprite2D4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-14.600006, -62.999992), Vector2(-30, -43.25), Vector2(-24, -21.250002), Vector2(4.999998, -42.25), Vector2(-20.749998, -47)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("pez1/Sprite2D5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(31, -86.59999), Vector2(9, -72.25), Vector2(-11.25, -54), Vector2(-26.75, -64.25), Vector2(-0.5, -76.5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dqcsd"]
@@ -97,12 +146,13 @@ _data = {
 }
 
 [node name="peces" type="Node2D" unique_id=1992218814]
-scale = Vector2(4, 4)
+scale = Vector2(3, 3)
 script = ExtResource("1_0vjuy")
 vel_peces = 500.0
 velocidad_retroceso = 400.0
 
 [node name="pez1" type="Area2D" parent="." unique_id=571302801]
+scale = Vector2(0.8, 0.8)
 collision_layer = 5
 collision_mask = 5
 
@@ -141,6 +191,7 @@ rect = Rect2(-100, -10, 200, 20)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=289560175]
 libraries/ = SubResource("AnimationLibrary_dqcsd")
+autoplay = &"RESET"
 
 [connection signal="body_entered" from="pez1" to="." method="_on_pez_1_body_entered"]
 [connection signal="body_exited" from="pez1" to="." method="_on_pez_1_body_exited"]
