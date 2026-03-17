@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bo6h12jdfe2og"]
 
-[ext_resource type="Script" uid="uid://d0xh5oubb62de" path="res://Scrips/menu_principal.gd" id="1_arcut"]
+[ext_resource type="Script" path="res://Scrips/menu_principal.gd" id="1_arcut"]
 [ext_resource type="Texture2D" uid="uid://c3ryytq3ox2cs" path="res://assets/Menu/LowRes.png" id="2_arcut"]
 [ext_resource type="Texture2D" uid="uid://crww0l2fiui31" path="res://assets/Menu/LowRes_n.png" id="3_olkao"]
 [ext_resource type="FontFile" uid="uid://qmxifrs3b331" path="res://Fonts/Daydream DEMO.otf" id="3_p8sbp"]
